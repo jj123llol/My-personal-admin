@@ -47,6 +47,20 @@ end
 if msg:lower():sub(1,13) == "/speedy" then
   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 999
  end
+ 
+ if msg:lower():sub(1,13) == "/hell" then
+  tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(300, Enum.EasingStyle.Linear)
+
+tween = tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(0, -1000, 0)})
+tween:Play()
+ end
+
+ if msg:lower():sub(1,13) == "/void" then
+  tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(300, Enum.EasingStyle.Linear)
+
+tween = tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(0, -1000, 0)})
+tween:Play()
+ end
 
 
 

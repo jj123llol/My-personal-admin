@@ -20,9 +20,7 @@ game.Players.LocalPlayer.Character.Humanoid.Sit = true
   end
   
   if msg:lower():sub(1,13) == "/kick" then
-game.Players.LocalPlayer:Kick(Kicked by rev LLLL)
-
-
+game.Players.LocalPlayer:Kick("Kicked by rev/jude")
   end
   
   if msg:lower():sub(1,13) == "/sit" then

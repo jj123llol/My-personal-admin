@@ -19,6 +19,10 @@ if msg:lower():sub(1,13) == "/trip" then
 game.Players.LocalPlayer.Character.Humanoid.Sit = true
   end
   
+  if msg:lower():sub(1,13) == "/sit" then
+game.Players.LocalPlayer.Character.Humanoid.Sit = true
+  end
+  
   if msg:lower():sub(1,13) == "/freeze" then
   game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
  end

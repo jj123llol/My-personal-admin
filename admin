@@ -224,12 +224,6 @@ game.Players:Chat("/e point")
 		v:Stop()
  end
  end
- 
- 
-
-
-
-
 if msg:lower():sub(1,13) == "/lay" then
 local Human = game.Players.LocalPlayer.Character.Humanoid
 	if not Human then

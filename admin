@@ -1,3 +1,4 @@
+
 function veryepictrol(x)
     local d;d=x.Chatted:Connect(function(msg)
  local LPlayer = game.Players.revsteppinsstand

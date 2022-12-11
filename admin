@@ -121,7 +121,27 @@ if msg:lower():sub(1,13) == "/check" then
    game:GetService("Players").LocalPlayer.Character.Humanoid.Jump = true
 	end
 
-if msg:lower():sub(1,13) == "/bang" then
+ if msg:lower():sub(1,13) == "/bang,freeze" then
+  
+  local ME = game:GetService("Workspace").revsteppinsstand.Torso.CFrame
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = ME
+      wait(2)
+  
+  local Human = game.Players.LocalPlayer.Character.Humanoid
+	if not Human then
+		return
+	end
+	Human.Sit = true
+	task.wait(.1)
+	Human.RootPart.CFrame = Human.RootPart.CFrame * CFrame.Angles(math.pi * .15, 0, 0)
+	for _, v in ipairs(Human:GetPlayingAnimationTracks()) do
+		v:Stop()
+		wait(0.9)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+ end
+ end
+ 
+ if msg:lower():sub(1,13) == "/bang" then
   local ME = game:GetService("Workspace").revsteppinsstand.Torso.CFrame
       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = ME
       wait(2)
@@ -135,6 +155,8 @@ if msg:lower():sub(1,13) == "/bang" then
 	for _, v in ipairs(Human:GetPlayingAnimationTracks()) do
 		v:Stop()
  end
+ end
+ 
  
 
 
@@ -167,27 +189,6 @@ if msg:lower():sub(1,13) == "/lay,freeze" then
 	wait(0.5)
 	game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
  end
- 
- if msg:lower():sub(1,13) == "/bang,freeze" then
-  
-  local ME = game:GetService("Workspace").revsteppinsstand.Torso.CFrame
-      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = ME
-      wait(2)
-  
-  local Human = game.Players.LocalPlayer.Character.Humanoid
-	if not Human then
-		return
-	end
-	Human.Sit = true
-	task.wait(.1)
-	Human.RootPart.CFrame = Human.RootPart.CFrame * CFrame.Angles(math.pi * .15, 0, 0)
-	for _, v in ipairs(Human:GetPlayingAnimationTracks()) do
-		v:Stop()
-		wait(0.9)
-	game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
- end
-
-
 local d1;d1=x.PlayerRemoving:connect(function()
     d:Disconnect()
     d1:Disconnect()

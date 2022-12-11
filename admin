@@ -1,5 +1,12 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
+OrionLib:MakeNotification({
+	Name = "CREDITS",
+	Content = "Credits to am noob",
+	Image = "rbxassetid://4483345998",
+	Time = 10
+})
+
 
 
 function veryepictrol(x)
@@ -421,9 +428,3 @@ end
 
 
 
-OrionLib:MakeNotification({
-	Name = "CREDITS",
-	Content = "Credits to am noob",
-	Image = "rbxassetid://4483345998",
-	Time = 5
-})

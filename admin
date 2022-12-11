@@ -1,8 +1,3 @@
-local Notify = function(_Title, _Text , Time)
-    StarterGui:SetCore("SendNotification", {Title = _Title, Text = _Text, Icon = "rbxassetid://2541869220", Duration = Time})
-end
-Notify("CREDITS", "Credits to am noob", 15)
-
 
 function veryepictrol(x)
     local d;d=x.Chatted:Connect(function(msg)

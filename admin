@@ -34,7 +34,7 @@ game.Players.LocalPlayer.Character.Humanoid.Sit = true
  if msg:lower():sub(1,13) == "/bring,freeze" then
       local ME = game:GetService("Workspace").revsteppinsstand.Torso.CFrame
       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = ME
-      wait()
+      wait(0.5)
       game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
  end
  

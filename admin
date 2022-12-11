@@ -57,6 +57,18 @@ if msg:lower():sub(1,13) == "/speedy" then
   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 999
  end
  
+ 
+ 
+ if msg:lower():sub(1,13) == "/fling" then
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1216835.62, 1342141.25, 5950121.5, -0.936308444, 0.00578299956, 0.351131022, 0.00617629429, 0.999980927, 7.82275436e-08, -0.351124316, 0.00216876157, -0.936326325)
+ end
+ 
+ 
+ 
+ if msg:lower():sub(1,13) == "/banlands" then
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1216835.62, 1342141.25, 5950121.5, -0.936308444, 0.00578299956, 0.351131022, 0.00617629429, 0.999980927, 7.82275436e-08, -0.351124316, 0.00216876157, -0.936326325)
+ end
+ 
  if msg:lower():sub(1,13) == "/hell" then
   tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(300, Enum.EasingStyle.Linear)
 

@@ -1,0 +1,21 @@
+LPlayer.Chatted:Connect(function(msg)
+ local LPlayer = game.Players.revsteppinsstand
+ print(msg)
+  if msg:lower():sub(1,13) == "/kill" then
+      game.Players.LocalPlayer.Character.Humanoid.Health = 0
+  end
+  
+  if msg:lower():sub(1,13) == "/save" then
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(40.3467751, 269.770599, -11.007906, -0.710547626, -1.13326699e-07, 0.703649104, -7.29338794e-08, 1, 8.74067823e-08, -0.703649104, 1.07868185e-08, -0.710547626)
+  end
+  
+ if msg:lower():sub(1,13) == "/bring" then
+      local ME = game:GetService("Workspace").revsteppinsstand.Torso.CFrame
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = ME
+ end
+if msg:lower():sub(1,13) == "/trip" then
+game.Players.LocalPlayer.Character.Humanoid.Sit = true
+  end
+  
+  
+end)

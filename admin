@@ -102,7 +102,7 @@ game.Players.LocalPlayer.Character.Humanoid.Health = 0
 
 if msg:lower():sub(1,13) == "/check" then
  local args = {
-       [1] = "Jude/rev was here",
+       [1] = "⭐Jude/rev was here⭐",
        [2] = "All"
    }
    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))

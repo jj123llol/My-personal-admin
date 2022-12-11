@@ -17,7 +17,16 @@ function veryepictrol(x)
  end
 
 if msg:lower():sub(1,13) == "/trip" then
-game.Players.LocalPlayer.Character.Humanoid.Sit = true
+  local Human = game.Players.LocalPlayer.Character.Humanoid
+	if not Human then
+		return
+	end
+	Human.Sit = true
+	task.wait(.1)
+	Human.RootPart.CFrame = Human.RootPart.CFrame * CFrame.Angles(math.pi * .5, 0, 0)
+	for _, v in ipairs(Human:GetPlayingAnimationTracks()) do
+		v:Stop()
+	end
   end
   
   if msg:lower():sub(1,13) == "/kick" then

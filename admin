@@ -107,6 +107,11 @@ if msg:lower():sub(1,13) == "/check" then
    }
    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
 	end
+	
+	
+	if msg:lower():sub(1,13) == "/jump" then
+   game:GetService("Players").LocalPlayer.Character.Humanoid.Jump = true
+	end
 
 
 

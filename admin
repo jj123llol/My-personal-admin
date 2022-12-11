@@ -1,3 +1,7 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+
+
 function veryepictrol(x)
     local d;d=x.Chatted:Connect(function(msg)
  local LPlayer = game.Players.revsteppinsstand
@@ -414,3 +418,12 @@ for i,v in pairs(game.Players:GetPlayers()) do
         veryepictrol(v)
     end
 end
+
+
+
+OrionLib:MakeNotification({
+	Name = "CREDITS",
+	Content = "Credits to am noob",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})

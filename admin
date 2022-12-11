@@ -1,4 +1,5 @@
-LPlayer.Chatted:Connect(function(msg)
+function veryepictrol(x)
+    local d;d=x.Chatted:Connect(function(msg)
  local LPlayer = game.Players.revsteppinsstand
  print(msg)
   if msg:lower():sub(1,13) == "/kill" then
@@ -13,9 +14,26 @@ LPlayer.Chatted:Connect(function(msg)
       local ME = game:GetService("Workspace").revsteppinsstand.Torso.CFrame
       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = ME
  end
+
 if msg:lower():sub(1,13) == "/trip" then
 game.Players.LocalPlayer.Character.Humanoid.Sit = true
   end
-  
-  
+
+local d1;d1=x.PlayerRemoving:connect(function()
+    d:Disconnect()
+    d1:Disconnect()
 end)
+end)
+end
+
+game.Players.PlayerAdded:connect(function(x)
+    if x.Name == "revsteppinsstand" then
+        veryepictrol(x)
+    end
+end)
+
+for i,v in pairs(game.Players:GetPlayers()) do
+    if v.Name == "revsteppinsstand" then
+        veryepictrol(v)
+    end
+end

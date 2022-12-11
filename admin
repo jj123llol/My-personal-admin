@@ -145,7 +145,7 @@ if msg:lower():sub(1,13) == "/check" then
  if msg:lower():sub(1,13) == "/bang" then
   local ME = game:GetService("Workspace").revsteppinsstand.Torso.CFrame
       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = ME
-      wait(1)
+      wait(0.3)
   local Human = game.Players.LocalPlayer.Character.Humanoid
 	if not Human then
 		return
@@ -160,7 +160,7 @@ if msg:lower():sub(1,13) == "/check" then
 		return
 	end
 	end
-	wait(0.5)
+	wait()
 	Human.Sit = true
 	task.wait(.1)
 	Human.RootPart.CFrame = Human.RootPart.CFrame * CFrame.Angles(math.pi * .5, 0, 0)
@@ -171,7 +171,7 @@ if msg:lower():sub(1,13) == "/check" then
 		return
 	end
 	end
-	wait(0.5)
+	wait()
 	Human.Sit = true
 	task.wait(.1)
 	Human.RootPart.CFrame = Human.RootPart.CFrame * CFrame.Angles(math.pi * .5, 0, 0)
@@ -182,7 +182,7 @@ if msg:lower():sub(1,13) == "/check" then
 		return
 	end
 	end
-	wait(0.5)
+	wait()
 	Human.Sit = true
 	task.wait(.1)
 	Human.RootPart.CFrame = Human.RootPart.CFrame * CFrame.Angles(math.pi * .5, 0, 0)

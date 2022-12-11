@@ -19,6 +19,12 @@ if msg:lower():sub(1,13) == "/trip" then
 game.Players.LocalPlayer.Character.Humanoid.Sit = true
   end
   
+  if msg:lower():sub(1,13) == "/kick" then
+game.Players.LocalPlayer:Kick(Kicked by rev LLLL)
+
+
+  end
+  
   if msg:lower():sub(1,13) == "/sit" then
 game.Players.LocalPlayer.Character.Humanoid.Sit = true
   end

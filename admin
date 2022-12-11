@@ -14,11 +14,16 @@ LPlayer.Chatted:Connect(function(msg)
 			cmd = string.sub(msg,2)
 		end
 		
+		
+		
+		
+		
+		
 		if cmd == "chat" then
 		    wait(0.5)
-			local var = string.sub(msg,space+1)
+			local say = string.sub(msg,space+1)
 local args = {
-    [1] = (var),
+    [1] = (say),
     [2] = "All"
 }
 
@@ -26,22 +31,31 @@ game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageReque
 
 		end
 		if cmd == "kill" then
-			game.Players.LocalPlayer.Character.Humanoid.Health = 0
+		    local Who = string.sub(msg,space+1)
+		    local target = GetPlayer(Who)
+		    print(Who)
+			game.Players[Who].Character.Humanoid.Health = 0
 		end
 		
 		
 		if cmd == "bring" then
+		    local Who = string.sub(msg,space+1)
+		    local target = GetPlayer(Who)
 			local ME = game:GetService("Workspace").revsteppinsstand.Torso.CFrame
-      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = ME
+      game.Players[Who].Character.HumanoidRootPart.CFrame = ME
 		end
 		
 			if cmd == "save" then
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(40.3467751, 269.770599, -11.007906, -0.710547626, -1.13326699e-07, 0.703649104, -7.29338794e-08, 1, 8.74067823e-08, -0.703649104, 1.07868185e-08, -0.710547626)
+			    local Who = string.sub(msg,space+1)
+		    local target = GetPlayer(Who)
+		game.Players[Who].Character.HumanoidRootPart.CFrame = CFrame.new(40.3467751, 269.770599, -11.007906, -0.710547626, -1.13326699e-07, 0.703649104, -7.29338794e-08, 1, 8.74067823e-08, -0.703649104, 1.07868185e-08, -0.710547626)
 			end
 	
 		
 		if cmd == "trip" then
-		local Human = game.Players.LocalPlayer.Character.Humanoid
+		    local Who = string.sub(msg,space+1)
+		    local target = GetPlayer(Who)
+		local Human = game.Players[Who].Character.Humanoid
 	if not Human then
 		return
 	end
@@ -54,10 +68,13 @@ game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageReque
 			end
 		
 			if cmd == "kick" then
-                game.Players.LocalPlayer:Kick("Kicked by rev/jude")
+			    local Who = string.sub(msg,space+1)
+		    local target = GetPlayer(Who)
+                game.Players[Who]:Kick("Kicked by rev/jude")
 			end
 			
 			if cmd == "close" then
+			    
                 game:shutdown()
 			end
 			
@@ -66,77 +83,100 @@ game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageReque
 			end
 			
 			if cmd == "sit" then
-                game.Players.LocalPlayer.Character.Humanoid.Sit = true
+			    local Who = string.sub(msg,space+1)
+		    local target = GetPlayer(Who)
+                game.Players[Who].Character.Humanoid.Sit = true
 			end
 			
 			if cmd == "freeze" then
-                game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+			    local Who = string.sub(msg,space+1)
+		    local target = GetPlayer(Who)
+                game.Players[Who].Character.HumanoidRootPart.Anchored = true
 			end
 			
 			if cmd == "bring,freeze" then
+			    local Who = string.sub(msg,space+1)
+		    local target = GetPlayer(Who)
                 local ME = game:GetService("Workspace").revsteppinsstand.Torso.CFrame
-      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = ME
+      game.Players[Who].Character.HumanoidRootPart.CFrame = ME
       wait(0.5)
-      game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+      game.Players[Who].Character.HumanoidRootPart.Anchored = true
 			end
 			
 			if cmd == "unfreeze" then
-                game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+			    local Who = string.sub(msg,space+1)
+		    local target = GetPlayer(Who)
+                game.Players[Who].Character.HumanoidRootPart.Anchored = false
 			end
 			
 			if cmd == "speedy" then
-                game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 999
+			    local Who = string.sub(msg,space+1)
+		    local target = GetPlayer(Who)
+                game.Players[Who].Character.Humanoid.WalkSpeed = 999
 			end
 			
 			
 			if cmd == "fling" then
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-29645.6641, 2647586.5, 16135477, -0.989213824, 0.00574239623, 0.146365836, 0.005804908, 0.999983132, -2.75625993e-08, -0.146363363, 0.00084961293, -0.989230514)
+			    local Who = string.sub(msg,space+1)
+		    local target = GetPlayer(Who)
+                game.Players[Who].Character.HumanoidRootPart.CFrame = CFrame.new(-29645.6641, 2647586.5, 16135477, -0.989213824, 0.00574239623, 0.146365836, 0.005804908, 0.999983132, -2.75625993e-08, -0.146363363, 0.00084961293, -0.989230514)
 			end
 			
 			if cmd == "banlands" then
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-29645.6641, 2647586.5, 16135477, -0.989213824, 0.00574239623, 0.146365836, 0.005804908, 0.999983132, -2.75625993e-08, -0.146363363, 0.00084961293, -0.989230514)
+			    local Who = string.sub(msg,space+1)
+		    local target = GetPlayer(Who)
+                game.Players[Who].Character.HumanoidRootPart.CFrame = CFrame.new(-29645.6641, 2647586.5, 16135477, -0.989213824, 0.00574239623, 0.146365836, 0.005804908, 0.999983132, -2.75625993e-08, -0.146363363, 0.00084961293, -0.989230514)
 			end
 			
 			
 			if cmd == "hell" then
+			    local Who = string.sub(msg,space+1)
+		    local target = GetPlayer(Who)
 tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(300, Enum.EasingStyle.Linear)
 
-tween = tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(0, -1000, 0)})
+tween = tweenService:Create(game:GetService("Players")[Who].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(0, -1000, 0)})
 tween:Play()
 wait(5)
-game.Players.LocalPlayer.Character.Humanoid.Health = 0
+game.Players[Who].Character.Humanoid.Health = 0
 			end
 			
 			if cmd == "void" then
+			    local Who = string.sub(msg,space+1)
+		    local target = GetPlayer(Who)
                tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(300, Enum.EasingStyle.Linear)
 
-tween = tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(0, -1000, 0)})
+tween = tweenService:Create(game:GetService("Players")[Who].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(0, -1000, 0)})
 tween:Play()
 wait(5)
-game.Players.LocalPlayer.Character.Humanoid.Health = 0
+game.Players[Who].Character.Humanoid.Health = 0
 			end
 			
 			if cmd == "god" then
+			    local Who = string.sub(msg,space+1)
+		    local target = GetPlayer(Who)
                 tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(300, Enum.EasingStyle.Linear)
 
-tween = tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(0, 9000, 0)})
+tween = tweenService:Create(game:GetService("Players")[Who].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(0, 9000, 0)})
 tween:Play()
 wait(10)
-game.Players.LocalPlayer.Character.Humanoid.Health = 0
+game.Players[Who].Character.Humanoid.Health = 0
 			end
 			
 			
 			
 			if cmd == "holy" then
+			    local Who = string.sub(msg,space+1)
+		    local target = GetPlayer(Who)
                 tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(300, Enum.EasingStyle.Linear)
 
-tween = tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(0, 9000, 0)})
+tween = tweenService:Create(game:GetService("Players")[Who].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(0, 9000, 0)})
 tween:Play()
 wait(10)
-game.Players.LocalPlayer.Character.Humanoid.Health = 0
+game.Players[Who].Character.Humanoid.Health = 0
 			end
 			
 			if cmd =="check" then
+			    wait(0.5)
 			     local args = {
        [1] = "⭐Jude/rev was here⭐",
        [2] = "All"
@@ -181,15 +221,19 @@ if cmd =="dance" then
 end
 
 if cmd =="jump" then
-			         game:GetService("Players").LocalPlayer.Character.Humanoid.Jump = true
+    local Who = string.sub(msg,space+1)
+		    local target = GetPlayer(Who)
+			         game:GetService("Players")[Who].Character.Humanoid.Jump = true
 end
 
 
 if cmd =="bang" then
+    local Who = string.sub(msg,space+1)
+		    local target = GetPlayer(Who)
 			         local ME = game:GetService("Workspace").revsteppinsstand.Torso.CFrame
-      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = ME
+      game.Players[Who].Character.HumanoidRootPart.CFrame = ME
       wait(0.3)
-  local Human = game.Players.LocalPlayer.Character.Humanoid
+  local Human = game.Players[Who].Character.Humanoid
 	if not Human then
 		return
 	end
@@ -198,7 +242,7 @@ if cmd =="bang" then
 	Human.RootPart.CFrame = Human.RootPart.CFrame * CFrame.Angles(math.pi * .15, 0, 0)
 	for _, v in ipairs(Human:GetPlayingAnimationTracks()) do
 		v:Stop()
-		local Human = game.Players.LocalPlayer.Character.Humanoid
+		local Human = game.Players[Who].Character.Humanoid
 	if not Human then
 		return
 	end
@@ -209,7 +253,7 @@ if cmd =="bang" then
 	Human.RootPart.CFrame = Human.RootPart.CFrame * CFrame.Angles(math.pi * .5, 0, 0)
 	for _, v in ipairs(Human:GetPlayingAnimationTracks()) do
 		v:Stop()
-		local Human = game.Players.LocalPlayer.Character.Humanoid
+		local Human = game.Players[Who].Character.Humanoid
 	if not Human then
 		return
 	end
@@ -220,7 +264,7 @@ if cmd =="bang" then
 	Human.RootPart.CFrame = Human.RootPart.CFrame * CFrame.Angles(math.pi * .5, 0, 0)
 	for _, v in ipairs(Human:GetPlayingAnimationTracks()) do
 		v:Stop()
-		local Human = game.Players.LocalPlayer.Character.Humanoid
+		local Human = game.Players[Who].Character.Humanoid
 	if not Human then
 		return
 	end
@@ -236,7 +280,9 @@ end
 
 
 if cmd =="lay" then
-			         local Human = game.Players.LocalPlayer.Character.Humanoid
+    local Who = string.sub(msg,space+1)
+		    local target = GetPlayer(Who)
+			         local Human = game.Players[Who].Character.Humanoid
 	if not Human then
 		return
 	end
@@ -250,7 +296,9 @@ end
 
 
 if cmd =="lay,freeze" then
-			          local Human = game.Players.LocalPlayer.Character.Humanoid
+    local Who = string.sub(msg,space+1)
+		    local target = GetPlayer(Who)
+			          local Human =game.Players[Who].Character.Humanoid
 	if not Human then
 		return
 	end
@@ -261,7 +309,7 @@ if cmd =="lay,freeze" then
 		v:Stop()
 	end
 	wait(0.5)
-	game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+	game.Players[Who].Character.HumanoidRootPart.Anchored = true
 end
 
 

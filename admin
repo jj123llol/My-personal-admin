@@ -53,6 +53,8 @@ if msg:lower():sub(1,13) == "/speedy" then
 
 tween = tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(0, -1000, 0)})
 tween:Play()
+wait(5)
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
  end
 
  if msg:lower():sub(1,13) == "/void" then
@@ -60,6 +62,8 @@ tween:Play()
 
 tween = tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(0, -1000, 0)})
 tween:Play()
+wait(5)
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
  end
 
 

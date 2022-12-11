@@ -139,6 +139,40 @@ if msg:lower():sub(1,13) == "/check" then
 	end
 	
 	
+	if msg:lower():sub(1,13) == "/laugh" then
+ game.Players:Chat("/e laugh")
+	end
+	
+	if msg:lower():sub(1,13) == "/wave" then
+ game.Players:Chat("/e wave")
+	end
+	
+	if msg:lower():sub(1,13) == "/dance3" then
+ game.Players:Chat("/e dance3")
+	end
+	
+	if msg:lower():sub(1,13) == "/dance2" then
+ game.Players:Chat("/e dance2")
+	end
+	
+	if msg:lower():sub(1,13) == "/dance1" then
+ game.Players:Chat("/e dance1")
+	end
+	
+		if msg:lower():sub(1,13) == "/dance" then
+ game.Players:Chat("/e dance")
+	end
+	
+			if msg:lower():sub(1,13) == "/point" then
+game.Players:Chat("/e point")
+	end
+	
+	
+	
+	
+	
+	
+	
 	if msg:lower():sub(1,13) == "/jump" then
    game:GetService("Players").LocalPlayer.Character.Humanoid.Jump = true
 	end

@@ -18,6 +18,14 @@ function veryepictrol(x)
 if msg:lower():sub(1,13) == "/trip" then
 game.Players.LocalPlayer.Character.Humanoid.Sit = true
   end
+  
+  if msg:lower():sub(1,13) == "/freeze" then
+  game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+ end
+ 
+ if msg:lower():sub(1,13) == "/unfreeze" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+ end
 
 local d1;d1=x.PlayerRemoving:connect(function()
     d:Disconnect()

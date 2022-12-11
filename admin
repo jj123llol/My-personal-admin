@@ -43,6 +43,15 @@ ts:Teleport(game.PlaceId, p)
 
 end
 
+
+if msg:lower():sub(1,13) == "/speedy" then
+  game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 999
+ end
+
+
+
+
+
 local d1;d1=x.PlayerRemoving:connect(function()
     d:Disconnect()
     d1:Disconnect()

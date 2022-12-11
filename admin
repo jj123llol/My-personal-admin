@@ -210,29 +210,7 @@ if msg:lower():sub(1,13) == "/e lay,freeze" then
 	end
 	wait(0.5)
 	game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
- end
-local d1;d1=x.PlayerRemoving:connect(function()
-    d:Disconnect()
-    d1:Disconnect()
-end)
-end)
-end
-
-game.Players.PlayerAdded:connect(function(x)
-    if x.Name == "revsteppinsstand" then
-        veryepictrol(x)
-    end
-end)
-
-for i,v in pairs(game.Players:GetPlayers()) do
-    if v.Name == "revsteppinsstand" then
-        veryepictrol(v)
-    end
-end
-  
-  
-  
-  
+ end 
   if msg:lower():sub(1,13) == "/save" then
       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(40.3467751, 269.770599, -11.007906, -0.710547626, -1.13326699e-07, 0.703649104, -7.29338794e-08, 1, 8.74067823e-08, -0.703649104, 1.07868185e-08, -0.710547626)
   end

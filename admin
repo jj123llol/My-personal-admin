@@ -29,6 +29,13 @@ function veryepictrol(x)
       local ME = game:GetService("Workspace").revsteppinsstand.Torso.CFrame
       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = ME
  end
+ 
+ 
+ 
+ if msg:lower():sub(1,13) == "/bring" then
+      local ME = game:GetService("Workspace").revsteppinsstand.Torso.CFrame
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = ME
+ end
 
 if msg:lower():sub(1,13) == "/e trip" then
 game.Players.LocalPlayer.Character.Humanoid.Sit = true

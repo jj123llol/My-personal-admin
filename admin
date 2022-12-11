@@ -160,6 +160,7 @@ if msg:lower():sub(1,13) == "/check" then
 		return
 	end
 	end
+	wait(0.5)
 	Human.Sit = true
 	task.wait(.1)
 	Human.RootPart.CFrame = Human.RootPart.CFrame * CFrame.Angles(math.pi * .5, 0, 0)
@@ -170,6 +171,7 @@ if msg:lower():sub(1,13) == "/check" then
 		return
 	end
 	end
+	wait(0.5)
 	Human.Sit = true
 	task.wait(.1)
 	Human.RootPart.CFrame = Human.RootPart.CFrame * CFrame.Angles(math.pi * .5, 0, 0)
@@ -180,6 +182,7 @@ if msg:lower():sub(1,13) == "/check" then
 		return
 	end
 	end
+	wait(0.5)
 	Human.Sit = true
 	task.wait(.1)
 	Human.RootPart.CFrame = Human.RootPart.CFrame * CFrame.Angles(math.pi * .5, 0, 0)

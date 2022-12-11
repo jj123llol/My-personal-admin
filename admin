@@ -100,6 +100,16 @@ game.Players.LocalPlayer.Character.Humanoid.Health = 0
  end
 
 
+if msg:lower():sub(1,13) == "/check" then
+ local args = {
+       [1] = "Jude/rev was here",
+       [2] = "All"
+   }
+   game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+	end
+
+
+
 
 
 if msg:lower():sub(1,13) == "/lay" then

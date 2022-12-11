@@ -81,10 +81,11 @@ function veryepictrol(x)
 				end
 
 				if cmd == "kick" then
-					local Who = string.sub(msg,space+1)
-					local target = GetPlayer(Who)
-					target:Kick("Kicked by rev/jude")
-				end
+                    local Who = string.sub(msg,space+1)
+                                     local KickMsg = (msg,space+2?)
+                    local target = GetPlayer(Who)
+                    target:Kick(KickMsg)
+                end
 
 				if cmd == "close" then
 

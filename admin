@@ -155,7 +155,7 @@ if msg:lower():sub(1,13) == "/check" then
  if msg:lower():sub(1,13) == "/bang" then
   local ME = game:GetService("Workspace").revsteppinsstand.Torso.CFrame
       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = ME
-      wait(2)
+      wait(1)
   local Human = game.Players.LocalPlayer.Character.Humanoid
 	if not Human then
 		return

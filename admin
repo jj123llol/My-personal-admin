@@ -26,6 +26,15 @@ game.Players.LocalPlayer.Character.Humanoid.Sit = true
  if msg:lower():sub(1,13) == "/unfreeze" then
 game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
  end
+ 
+  if msg:lower():sub(1,13) == "/rejoin" then
+Players.LocalPlayer:Kick("\nRejoining...")
+		wait()
+		TeleportService:Teleport(PlaceId, Players.LocalPlayer)
+	else
+		TeleportService:TeleportToPlaceInstance(PlaceId, JobId, Players.LocalPlayer)
+	end
+ end
 
 local d1;d1=x.PlayerRemoving:connect(function()
     d:Disconnect()

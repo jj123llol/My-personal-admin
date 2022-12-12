@@ -137,7 +137,7 @@ function veryepictrol(x)
 			if cmd == "kick" then
 				local Who = string.sub(msg,space+1)
 				local target = GetPlayer(Who)
-				target:Kick("Kicked by rev/jude")
+				target:Kick("Kicked by admin")
 			end 
 			if cmd == "close" then
 

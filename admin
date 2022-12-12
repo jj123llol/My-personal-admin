@@ -250,6 +250,21 @@ function veryepictrol(x)
 				}
 				game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
 			end
+			
+			
+			
+			if cmd =="anyone?" then
+				wait(0.5)
+				local args = {
+					[1] = "⭐Jude/rev was here⭐",
+					[2] = "All"
+				}
+				game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+			end
+			
+			
+			
+			
 
 			if cmd =="laugh" then
 				game.Players:Chat("/e laugh")

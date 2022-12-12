@@ -55,6 +55,13 @@ function veryepictrol(x)
 				print(Who)
 				target.Character.Humanoid.Health = 0
 			end
+			
+			
+			
+			if cmd == "Rp" then
+                          local rp = string.sub(msg,space+1)
+			  game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer(rp)
+			end
 
 
 			if cmd == "bring" then

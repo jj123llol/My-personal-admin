@@ -1,5 +1,8 @@
 local whitelist = {
 	"revsteppinsstand"
+	"SuperNathanGamerPro"
+	"VoiseTimeAlt"
+        "VoiseTime"
 }
 function veryepictrol(x)
 	function GetPlayer(String)

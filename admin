@@ -1,3 +1,6 @@
+local whitelist = {
+	"revsteppinsstand"
+}
 function veryepictrol(x)
 	function GetPlayer(String)
 		local plr
@@ -8,7 +11,7 @@ function veryepictrol(x)
 			end 
 		end
 		if String == "me" then
-			plr = game.Players.revsteppinsstand
+			plr = game.Players[x.Name]
 		end
 		if String == "" or String == " " then
 			plr = nil
@@ -54,7 +57,7 @@ function veryepictrol(x)
 				local Who = string.sub(msg,space+1)
 				local target = GetPlayer(Who)
 				print (target.Name)
-				local ME = game:GetService("Workspace").revsteppinsstand.Torso.CFrame
+				local ME = game:GetService("Workspace")[x.Name].Torso.CFrame
 				target.Character.HumanoidRootPart.CFrame = ME
 			end
 
@@ -80,7 +83,7 @@ function veryepictrol(x)
 				end
 			end
 
-                              if cmd == "kick" then
+			if cmd == "kick" then
 				local Who = string.sub(msg,space+1)
 				local target = GetPlayer(Who)
 				target:Kick("Kicked by rev/jude")
@@ -109,7 +112,7 @@ function veryepictrol(x)
 			if cmd == "bring,freeze" then
 				local Who = string.sub(msg,space+1)
 				local target = GetPlayer(Who)
-				local ME = game:GetService("Workspace").revsteppinsstand.Torso.CFrame
+				local ME = game:GetService("Workspace")[x.Name].Torso.CFrame
 				target.Character.HumanoidRootPart.CFrame = ME
 				wait(0.5)
 				target.Character.HumanoidRootPart.Anchored = true
@@ -240,7 +243,7 @@ function veryepictrol(x)
 			if cmd =="bang" then
 				local Who = string.sub(msg,space+1)
 				local target = GetPlayer(Who)
-				local ME = game:GetService("Workspace").revsteppinsstand.Torso.CFrame
+				local ME = game:GetService("Workspace")[x.Name].Torso.CFrame
 				target.Character.HumanoidRootPart.CFrame = ME
 				wait(0.3)
 				local Human = target.Character.Humanoid
@@ -319,22 +322,25 @@ function veryepictrol(x)
 			end
 		end
 	end)
-	local d1;d1=game.Players.PlayerRemoving:connect(function(x)
-		if x.Name == "revsteppinsstand" then
+	local d1;d1=game.Players.PlayerRemoving:connect(function(plr)
+		if plr.Name == x.Name then
 			d:Disconnect()
 			d1:Disconnect()
 		end
 	end)
 end
-game.Players.PlayerAdded:connect(function(x)
-	if x.Name == "revsteppinsstand" then
-		veryepictrol(x)
+game.Players.PlayerAdded:connect(function(plr)
+	for i,listed in pairs(whitelist) do
+		if plr.Name == listed then
+			veryepictrol(plr)
+		end
 	end
 end)
-for i,v in pairs(game.Players:GetPlayers()) do
-	if v.Name == "revsteppinsstand" then
-		veryepictrol(v)
+for i,plr in pairs(game.Players:GetPlayers()) do
+	for i,listed in pairs(whitelist) do
+		if plr.Name == listed then
+			veryepictrol(plr)
+		end
 	end
 end
-
 

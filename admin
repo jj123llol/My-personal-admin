@@ -1,3 +1,10 @@
+--SUPER SECRET ADMIN SCRIPT 😳
+
+
+
+
+
+
 local whitelist = {
 	"revsteppinsstand",
 	"SuperNathanGamerPro",
@@ -64,6 +71,17 @@ function veryepictrol(x)
 
 			end
 			
+			if cmd == "." then
+				wait(0.5)
+				local say = string.sub(msg,space+1)
+				local args = {
+					[1] = (say),
+					[2] = "All"
+				}
+
+				game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+			end
 			
 			
 			

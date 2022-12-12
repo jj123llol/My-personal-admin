@@ -82,9 +82,9 @@ function veryepictrol(x)
 
 			if cmd == "kick" then
     local Who = string.sub(msg,space+1)
-    local KickMsg = string.sub(msg,space+2)
+    local KickMsg = msg:split(' ')[3]
     local target = GetPlayer(Who)
-    if  game.Players.LocalPlayer == target then
+    if  game.Players.LocalPlayer.Name == target.Name then
         target:Kick(KickMsg)
     end
 end

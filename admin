@@ -6,11 +6,11 @@
 
 
 local whitelist = {
-	"revsteppinsstand",
 	"SuperNathanGamerPro",
 	"VoiseTimeAlt",
         "VoiseTime",
 	"dad_xdyballxz",
+	
 }
 function veryepictrol(x)
 	function GetPlayer(String)

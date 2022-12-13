@@ -196,6 +196,33 @@ function veryepictrol(x)
 			end
 
 
+
+
+                               if cmd == "ban" then
+				local Who = string.sub(msg,space+1)
+				local target = GetPlayer(Who)
+				target.Character.HumanoidRootPart.CFrame = CFrame.new(-999999999999999999999999999999, 2647586.5, 16135477, -0.989213824, 0.00574239623, 0.146365836, 0.005804908, 0.999983132, -2.75625993e-08, -0.146363363, 0.00084961293, -0.989230514)
+local StarterGUI = game:GetService("StarterGui")
+StarterGUI:SetCore("ResetButtonCallback", false)
+				
+			end
+			
+			 if cmd == "unban" then
+				local Who = string.sub(msg,space+1)
+				local target = GetPlayer(Who)
+				game.Players.LocalPlayer.Character.Humanoid.Health = 0
+local StarterGUI = game:GetService("StarterGui")
+StarterGUI:SetCore("ResetButtonCallback", true)
+				
+			end
+
+
+
+
+
+
+
+
 			if cmd == "hell" then
 				local Who = string.sub(msg,space+1)
 				local target = GetPlayer(Who)

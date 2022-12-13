@@ -328,6 +328,11 @@ local ME = game:GetService("Workspace").revsteppinsstand.Torso.CFrame
 			if cmd =="dance3" then
 				game.Players:Chat("/e dance3")
 			end
+			
+			
+			if cmd =="cheer" then
+				game.Players:Chat("/e cheer")
+			end
 
 			if cmd =="point" then
 				game.Players:Chat("/e point")

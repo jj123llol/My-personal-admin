@@ -236,9 +236,9 @@ function veryepictrol(x)
 				local target = GetPlayer(Who)
 				tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(300, Enum.EasingStyle.Linear)
 
-				tween = tweenService:Create(target.Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(10000, 0, 0)})
+				tween = tweenService:Create(target.Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(99999999, 0, 999999)})
 				tween:Play()
-				wait(10)
+				wait(20)
 				target.Character.Humanoid.Health = 0
 			end
 

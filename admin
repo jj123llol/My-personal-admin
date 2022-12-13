@@ -228,6 +228,19 @@ function veryepictrol(x)
 				wait(10)
 				target.Character.Humanoid.Health = 0
 			end
+			
+			
+			
+			if cmd == "kidnap" then
+				local Who = string.sub(msg,space+1)
+				local target = GetPlayer(Who)
+				tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(300, Enum.EasingStyle.Linear)
+
+				tween = tweenService:Create(target.Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(10000, 0, 0)})
+				tween:Play()
+				wait(10)
+				target.Character.Humanoid.Health = 0
+			end
 
 
 

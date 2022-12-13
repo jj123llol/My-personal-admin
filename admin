@@ -6,9 +6,9 @@
 
 
 local whitelist = {
-	"SuperNathanGamerPro",
+        "SuperNathanGamerPro",
 	"revsteppinsstand",
-	"VoiseTimeAlt",
+        "VoiseTimeAlt",
         "VoiseTime",
 	"dad_xdyballxz",
 	

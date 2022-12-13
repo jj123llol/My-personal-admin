@@ -60,6 +60,27 @@ function veryepictrol(x)
 			
 			
 			
+			if cmd == "cmds" then
+				wait(0.5)
+				local say = string.sub(msg,space+1)
+				local args = {
+					[1] = "⭐Cmds are bring,kill,freeze,unfreeze,hell,void,holy,god,kidnap.",
+					[2] = "All"
+				}
+
+				game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+				wait(1)
+				local args = {
+					[1] = "trip,sit,lay,lay,freeze,jump,void,speedy,chat,banlands.⭐",
+					[2] = "All"
+				}
+
+				game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+			end
+			
+			
+			
 			if cmd == ".e" then
 				wait(0.5)
 				local say = string.sub(msg,space+1)

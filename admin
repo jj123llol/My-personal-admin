@@ -370,6 +370,37 @@ function veryepictrol(x)
 					v:Stop()
 				end
 			end
+			
+			
+			
+			
+			
+			if cmd == "sit,freeze" then
+				local Who = string.sub(msg,space+1)
+				local target = GetPlayer(Who)
+				local Human = target.Character.Humanoid
+				if not Human then
+					return
+				end
+				Human.Sit = true
+				
+				
+				
+				wait(0.5)
+				target.Character.HumanoidRootPart.Anchored = true
+			end
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 			if cmd =="lay" then
 				local Who = string.sub(msg,space+1)
 				local target = GetPlayer(Who)

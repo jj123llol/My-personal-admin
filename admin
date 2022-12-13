@@ -214,7 +214,7 @@ local StarterGUI = game:GetService("StarterGui")
 StarterGUI:SetCore("ResetButtonCallback", true)
 wait(0.5)
 game.Players.LocalPlayer.Character.Humanoid.Health = 0
-wait(5)
+wait(6)
 
 local ME = game:GetService("Workspace").revsteppinsstand.Torso.CFrame
       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = ME

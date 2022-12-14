@@ -58,6 +58,16 @@ function veryepictrol(x)
 
 			end
 			
+			if cmd == "sausage" then
+				wait()
+				local args = {
+					[1] = "⭐my "thing" is small.⭐",
+					[2] = "All"
+				}
+
+				game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+			
+			
 			
 			
 			if cmd == "cmds" then

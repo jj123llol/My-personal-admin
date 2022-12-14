@@ -61,7 +61,7 @@ function veryepictrol(x)
 			
 			
 			if cmd == "cmds" then
-				wait(0.5)
+				wait()
 				local say = string.sub(msg,space+1)
 				local args = {
 					[1] = "⭐Cmds are bring,kill,freeze,unfreeze,hell,void,holy,god,kidnap.",

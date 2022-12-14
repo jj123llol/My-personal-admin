@@ -62,7 +62,6 @@ function veryepictrol(x)
 			
 			if cmd == "cmds" then
 				wait()
-				local say = string.sub(msg,space+1)
 				local args = {
 					[1] = "⭐Cmds are bring,kill,freeze,unfreeze,hell,void,holy,god,kidnap.",
 					[2] = "All"
@@ -514,4 +513,3 @@ for i,plr in pairs(game.Players:GetPlayers()) do
 		end
 	end
 end
-

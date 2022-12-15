@@ -301,7 +301,7 @@ local ME = game:GetService("Workspace").revsteppinsstand.Torso.CFrame
 				local target = GetPlayer(Who)
 				tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(300, Enum.EasingStyle.Linear)
 
-				tween = tweenService:Create(target.Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(1000, 0, 5)})
+				tween = tweenService:Create(target.Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(10000, 0, 5)})
 				tween:Play()
 				wait(20)
 				target.Character.Humanoid.Health = 0

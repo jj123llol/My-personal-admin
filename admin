@@ -501,7 +501,8 @@ local ME = game:GetService("Workspace").revsteppinsstand.Torso.CFrame
 				target.Character.HumanoidRootPart.Anchored = true
 			end
 		end
-	end)
+		end
+end)
 	local d1;d1=game.Players.PlayerRemoving:connect(function(plr)
 		if plr.Name == x.Name then
 			d:Disconnect()

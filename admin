@@ -61,7 +61,7 @@ function veryepictrol(x)
 			if cmd == "sausage" then
 				wait()
 				local args = {
-					[1] = "⭐my "thing" is small.⭐",
+					[1] = "my 'thing' is small",
 					[2] = "All"
 				}
 

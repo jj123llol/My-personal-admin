@@ -222,7 +222,7 @@ end
 			if cmd == "roleplay" then
                           local haha = string.sub(msg,space+1)
 local args = {
-    [1] = (haha),
+    [1] = (haha)
 }
 
 game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer(unpack(args))

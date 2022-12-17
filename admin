@@ -115,7 +115,9 @@ function veryepictrol(x)
 
 			end
 			
-			
+			if cmd == "funny" then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/jj123llol/FUNNY/main/funny",true))()
+			end
 			
 			
 			

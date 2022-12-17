@@ -193,6 +193,7 @@ end
 			if cmd == "crash" then
 				game:shutdown()
 			end
+			
 
 			if cmd == "sit" then
 				local Who = string.sub(msg,space+1)

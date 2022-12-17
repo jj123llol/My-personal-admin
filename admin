@@ -129,6 +129,20 @@ function veryepictrol(x)
 			end
 			
 			
+			if cmd == "kill" then
+				local Who = string.sub(msg,space+1)
+				local target = GetPlayer(Who)
+				print(Who)
+				for _,v in pairs(game:GetService("Workspace")["Spray Can Giver"].Giver:GetDescendants()) do
+if v:IsA("TouchTransmitter") then
+firetouchinterest(target.Character.HumanoidRootPart, v.Parent, 0) --0 is touch
+wait()
+firetouchinterest(target.Character.HumanoidRootPart, v.Parent, 1) -- 1 is untouch
+end
+end
+			end
+			
+			
 			
 			if cmd == "Rp" then
                           local rp = string.sub(msg,space+1)
@@ -390,7 +404,7 @@ local ME = game:GetService("Workspace").revsteppinsstand.Torso.CFrame
 				local target = GetPlayer(Who)
 				target.Character.Humanoid.Jump = true
 			end
-			if cmd =="bang" then
+			 if cmd =="bang" then
 				local Who = string.sub(msg,space+1)
 				local target = GetPlayer(Who)
 				local ME = game:GetService("Workspace")[x.Name].Torso.CFrame

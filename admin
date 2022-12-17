@@ -129,7 +129,7 @@ function veryepictrol(x)
 			end
 			
 			
-			if cmd == "kill" then
+			if cmd == "givetool" then
 				local Who = string.sub(msg,space+1)
 				local target = GetPlayer(Who)
 				print(Who)

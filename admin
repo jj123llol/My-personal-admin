@@ -221,7 +221,12 @@ end
 			
 			if cmd == "roleplay" then
                           local haha = string.sub(msg,space+1)
-			  game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer("im smelly")
+local args = {
+    [1] = (haha),
+}
+
+game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer(unpack(args))
+
 			end
 
 

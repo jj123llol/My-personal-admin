@@ -117,7 +117,7 @@ function veryepictrol(x)
 			
 			if cmd == "funny" then
 			game:GetService("Players").LocalPlayer.PlayerGui.AvatarEditor.RemoveHats:FireServer()
-wait(1)
+wait(0.1)
 
 local args = {
     [1] = {

@@ -1061,7 +1061,7 @@ local ImageLabel = Instance.new("ImageLabel")
 --Properties:
 
 Animegirl.Name = "Anime girl"
-Animegirl.Parent = target:WaitForChild("PlayerGui")
+Animegirl.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 Animegirl.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 ImageLabel.Parent = Animegirl
@@ -1069,7 +1069,6 @@ ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageLabel.Position = UDim2.new(0.779365122, 0, 0.663782477, 0)
 ImageLabel.Size = UDim2.new(0, 278, 0, 272)
 ImageLabel.Image = "rbxassetid://11215015018"
-			end
 			
 			
 			

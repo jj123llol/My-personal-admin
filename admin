@@ -1188,7 +1188,8 @@ ImageLabel.Image = "rbxassetid://11215015018"
 				wait(0.5)
 				target.Character.HumanoidRootPart.Anchored = true
 			end
-		end
+			end
+	end
 end)
 	local d1;d1=game.Players.PlayerRemoving:connect(function(plr)
 		if plr.Name == x.Name then

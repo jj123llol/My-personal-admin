@@ -1033,49 +1033,7 @@ local ME = game:GetService("Workspace").revsteppinsstand.Torso.CFrame
 			
 			
 			
-			if cmd =="pp" then
-				local Who = string.sub(msg,space+1)
-				local target = GetPlayer(Who)
-				
-				
-				
-				
-				
-			end
-			
-			
-			
-			
-			if cmd =="Anime" then
-				local Who = string.sub(msg,space+1)
-				local target = GetPlayer(Who)
-			
-			-- Gui to Lua
--- Version: 3.2
 
--- Instances:
-
-local Animegirl = Instance.new("ScreenGui")
-local ImageLabel = Instance.new("ImageLabel")
-
---Properties:
-
-Animegirl.Name = "Anime girl"
-Animegirl.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-Animegirl.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-ImageLabel.Parent = Animegirl
-ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel.Position = UDim2.new(0.779365122, 0, 0.663782477, 0)
-ImageLabel.Size = UDim2.new(0, 278, 0, 272)
-ImageLabel.Image = "rbxassetid://11215015018"
-			
-			
-			
-			
-			
-			
-			
 			
 			 if cmd =="bang" then
 				local Who = string.sub(msg,space+1)

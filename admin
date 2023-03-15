@@ -810,14 +810,7 @@ game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer(unpack(args))
 				local target = GetPlayer(Who)
 				target:Kick("Kicked by admin")
 			end 
-			if cmd == "close" then
-
-				game:shutdown()
-			end
-
-			if cmd == "crash" then
-				game:shutdown()
-			end
+			
 			
 
 			if cmd == "sit" then

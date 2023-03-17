@@ -101,8 +101,8 @@ end
 workspace.CurrentCamera.CameraSubject = char
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame
 wait(0.5)
-local plrlv = game.Workspace[ME].HumanoidRootPart.CFrame.LookVector * 5
-local You2 = game.Workspace[ME].HumanoidRootPart.CFrame + plrlv
+local plrlv = [ME].HumanoidRootPart.CFrame.LookVector * 5
+local You2 = [ME].HumanoidRootPart.CFrame + plrlv
 
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = You2
 				end

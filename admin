@@ -79,7 +79,7 @@ function veryepictrol(x)
 				local target = GetPlayer(Who)
 				print(Who)
 				wait()
-				local ME = game:GetService("Workspace")[x.Name].Torso.CFrame
+				local ME = game:GetService("Workspace")[x.Name]
 				
 				  
     wait(0.5)

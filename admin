@@ -108,7 +108,7 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = You2
 			if cmd == "cmds" then
 				wait()
 				local args = {
-					[1] = "⭐Cmds are bring,kill,freeze,unfreeze,hell,void,holy,god,kidnap.",
+					[1] = "⭐Cmds are bring,tbring.kill,freeze,unfreeze,hell,void,holy,god,kidnap.",
 					[2] = "All"
 				}
 

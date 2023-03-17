@@ -71,7 +71,39 @@ function veryepictrol(x)
 				end
 			
 			
-			
+			if cmd == "tbring" then
+									local Who = string.sub(msg,space+1)
+				local target = GetPlayer(Who)
+				print(Who)
+				wait()
+				local ME = game:GetService("Workspace")[x.Name].Torso.CFrame
+				
+				  
+    wait(0.5)
+  local h = game.Players.LocalPlayer.Character.Humanoid:Clone()
+local plr = game.Players.LocalPlayer.Character
+local CF = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+local lp = game.Players.LocalPlayer
+local char = game.Players.LocalPlayer.Character
+local hrp = getRoot(game.Players.LocalPlayer.Character)
+h.Parent = game.Players.LocalPlayer.Character
+h.Name = "Hum"
+
+game.Players.LocalPlayer.Character.Humanoid:Destroy()
+
+for _,v in pairs(game.Players.LocalPlayer:GetDescendants()) do
+    if v.ClassName == "Tool" then
+        v.Parent = plr
+    end
+end
+workspace.CurrentCamera.CameraSubject = char
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame
+wait(0.5)
+local plrlv = game.Workspace[ME].HumanoidRootPart.CFrame.LookVector * 5
+local You2 = game.Workspace[ME].HumanoidRootPart.CFrame + plrlv
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = You2
+				end
 			
 			if cmd == "cmds" then
 				wait()

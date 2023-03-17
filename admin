@@ -885,7 +885,7 @@ game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer(unpack(args))
 			if cmd == "fling" then
 				local Who = string.sub(msg,space+1)
 				local target = GetPlayer(Who)
-				target.Character.HumanoidRootPart.CFrame = CFrame.new(-29645.6641, 2647586.5, 16135477, -0.989213824, 0.00574239623, 0.146365836, 0.005804908, 0.999983132, -2.75625993e-08, -0.146363363, 0.00084961293, -0.989230514)
+				target.Character.HumanoidRootPart.RotVelocity = Vector3.new(8000,8000,8000)
 			end
 
 			if cmd == "banlands" then

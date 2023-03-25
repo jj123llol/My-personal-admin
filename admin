@@ -63,6 +63,37 @@ function veryepictrol(x)
 
 			end
 			
+			
+			
+				if cmd == ";)" then
+getgenv().Flirt = true
+ local Who = string.sub(msg,space+1)
+  local target = GetPlayer(Who)
+  print(Who)
+while getgenv().Flirt == true do
+  local target2lv = target.Character.HumanoidRootPart.CFrame.LookVector * 1.5
+  local target2 = target.Character.HumanoidRootPart.CFrame + target2lv
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = target2
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position,target.Character.HumanoidRootPart.Position) 
+wait(2)
+    local pickUpLine = pickUpLines[math.random(#pickUpLines)]
+    print(pickUpLine)
+
+local args = {
+    [1] = pickUpLine,
+    [2] = "All"
+}
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+end
+end
+
+if cmd == "un;)" then
+getgenv().Flirt = false
+end
+
+
+
 			if cmd == "sausage" then
 				wait()
 				local args = {

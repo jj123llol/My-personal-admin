@@ -64,6 +64,29 @@ function veryepictrol(x)
 			end
 			
 			
+			local pickUpLines = {
+  "Are you a magician? Because whenever I look at you, everyone else disappears.",
+  "Do you have a map? I keep getting lost in your eyes.",
+  "Is your name Google? Because you have everything I've been searching for.",
+  "Are you an angel? Because heaven is missing one.",
+  "Do you believe in love at first sight, or should I walk by again?",
+"If I could rearrange the alphabet, I’d put ‘U’ and ‘I’ together.",
+"Are you a parking ticket? Because you’ve got FINE written all over you.",
+"Are you from Tennessee? Because you’re the only 10 I see!",
+"Are you French? Because Eiffel for you.",
+"I’m no photographer, but I can picture us together.",
+"There is something wrong with my cell phone. It doesn’t have your number in it.",
+"If a star fell from the sky every time I thought about you, then tonight the sky would be empty.",
+" Is it hot in here? Or is it just you?",
+" I don’t have a library card, but do you mind if I check you out?",
+"Roses are red. Violets are blue. I didn’t know what perfect was until I met you.",
+"Hey, tie your shoes! I don’t want you falling for anyone else.",
+"Can I follow you where you’re going right now? Because my parents always told me to follow my dreams.",
+"You look great right now. Do you know what else would look great on you? Me!",
+"You dropped something. My jaw.",
+" If you were words on a page, you’d be fine print.",
+
+}
 			
 				if cmd == ";)" then
 getgenv().Flirt = true

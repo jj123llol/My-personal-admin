@@ -902,7 +902,10 @@ game:GetService("ReplicatedStorage").SetRoleplayName:InvokeServer(unpack(args))
 				local target = GetPlayer(Who)
 				print (target.Name)
 				local ME = game:GetService("Workspace")[x.Name].Torso.CFrame
+				target.Character.HumanoidRootPart.Velocity = Vector3.new(0,0,0)
+				target.Character.HumanoidRootPart.RotVelocity = Vector3.new(0,0,0)
 				target.Character.HumanoidRootPart.CFrame = ME
+				target.Character.HumanoidRootPart.Velocity = Vector3.new(0,0,0)
 			end
 
 			if cmd == "save" then

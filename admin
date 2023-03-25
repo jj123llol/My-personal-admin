@@ -63,6 +63,39 @@ function veryepictrol(x)
 
 			end
 			
+			if cmd =="follow" then
+local Who = string.sub(msg,space+1)
+  local target = GetPlayer(Who)
+  print(Who)
+getgenv().Follow = true
+
+while getgenv().Follow == true do
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame
+end
+end
+
+if cmd =="unfollow" then
+getgenv().Follow = false
+end			
+
+if cmd =="walk" then
+local Who = string.sub(msg,space+1)
+  local target = GetPlayer(Who)
+  print(Who)
+  
+getgenv().WalkTo = true
+while getgenv().WalkTo == true do
+wait()
+game.Players.LocalPlayer.Character.Humanoid:MoveTo(target.Character.HumanoidRootPart.Position)
+end
+end
+
+if cmd == "unwalk" then
+getgenv().WalkTo = false
+end
+
+
 			
 			local pickUpLines = {
   "Are you a magician? Because whenever I look at you, everyone else disappears.",

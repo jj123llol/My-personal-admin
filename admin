@@ -204,7 +204,7 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = You2
 				game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
 				wait(1)
 				local args = {
-					[1] = "trip,sit,lay,lay,freeze,jump,void,speedy,chat,banlands.⭐",
+					[1] = "trip,sit,lay,lay,freeze,jump,void,speedy,chat,banlands,walkto,unwalkto,follow,unfollow.⭐",
 					[2] = "All"
 				}
 

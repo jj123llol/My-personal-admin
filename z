@@ -93,15 +93,12 @@ end
 		end
 	end)
 end
-game.Players.PlayerAdded:connect(function()
-
-for i,plr in pairs(game.Players:GetPlayers()) do
+game.Players.PlayerAdded:connect(function(play)
 	for i,listed in pairs(seclist) do
-		if plr.Name == listed then
+		if play.Name == listed then
 			veryepictrol(plr)
 		end
 	end
-end
 end)
 for i,plr in pairs(game.Players:GetPlayers()) do
 	for i,listed in pairs(seclist) do

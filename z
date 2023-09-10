@@ -15,7 +15,7 @@ local seclist = {
 }
 
 function veryepictrol(x)
-	function GetPlayer(String)
+	function z(String)
 		local plr
 		local strl = String:lower()
 		for i, v in pairs(game:GetService("Players"):GetPlayers()) do
@@ -50,7 +50,7 @@ function veryepictrol(x)
 			
 if cmd =="kick" then
 local Who = string.sub(msg,space+1)
-local target = GetPlayer(Who)
+local target = z(Who)
 if game.Players.LocalPlayer == target then
 game.Players.LocalPlayer:Kick("kicked by admin")
 end

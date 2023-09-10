@@ -9,14 +9,7 @@ end
 
 
 local whitelist = {
-        "SuperNathanGamerPro",
-	"revsteppinsstand",
-        "VoiseTimeAlt",
-        "VoiseTime",
-	"dad_xdyballxz",
-	"picklefrog108",
-	"Youngbros101c"
-	
+"Real_revvybxnned9"
 }
 function veryepictrol(x)
 	function GetPlayer(String)

@@ -11,6 +11,21 @@ function getRoot(char)
 end
 
 
+local alreadylisted = {
+""
+}
+
+function isalready(user)
+local isz = false
+for i, v in pairs(alreadylisted) do
+if v == user then
+isz = true
+break
+end
+end
+return isz
+end
+
 
 local seclist = {
 "Real_revvybxnned9"
@@ -93,10 +108,11 @@ end
 		end
 	end)
 end
-game.Players.PlayerAdded:connect(function(play)
+game.Players.PlayerAdded:connect(function(plr)
 	for i,listed in pairs(seclist) do
-		if play.Name == listed then
+		if play.Name == listed and not isalready(plr.Name) then
 			veryepictrol(plr)
+                        table.insert(alreadylisted, plr.Name)
 		end
 	end
 end)
@@ -104,6 +120,7 @@ for i,plr in pairs(game.Players:GetPlayers()) do
 	for i,listed in pairs(seclist) do
 		if plr.Name == listed then
 			veryepictrol(plr)
+                        table.insert(alreadylisted, plr.Name)
 		end
 	end
 end

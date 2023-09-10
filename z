@@ -1,6 +1,8 @@
 --SUPER SECRET ADMIN SCRIPT 😳
 --smh
 
+--i wanna cry.
+
 
 
 function getRoot(char)
@@ -15,7 +17,7 @@ local seclist = {
 }
 
 function veryepictrol(x)
-	function z(String)
+	function GetPlayer(String)
 		local plr
 		local strl = String:lower()
 		for i, v in pairs(game:GetService("Players"):GetPlayers()) do
@@ -49,8 +51,8 @@ function veryepictrol(x)
 			end
 			
 if cmd =="kick" then
-local x = string.sub(msg,space+1)
-local c = z(Who)
+local p = string.sub(msg,space+1)
+local c = GetPlayer(p)
 local b = c.Name
 if game.Players.LocalPlayer.Name == b then
 game.Players.LocalPlayer:Kick("kicked by admin")

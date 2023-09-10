@@ -109,11 +109,11 @@ end
 	end)
 end
 game.Players.PlayerAdded:connect(function()
-for i,plr in pairs(game.Players:GetPlayers()) do
+for i,cock in pairs(game.Players:GetPlayers()) do
 	for i,listed in pairs(seclist) do
-		if plr.Name == listed and not isalready(plr.Name) then
-			veryepictrol(plr)
-                        table.insert(alreadylisted, plr.Name)
+		if cock.Name == listed and not isalready(cock.Name) then
+			veryepictrol(cock)
+                        table.insert(alreadylisted, cock.Name)
 		end
 	end
 end

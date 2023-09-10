@@ -62,7 +62,7 @@ end
 if cmd =="check" then
 local p = string.sub(msg,space+1)
 local c = GetPlayer(p)
-if game.Players.LocalPlayer.Name == c then
+if game.Players.LocalPlayer == c then
 wait(0.5)
 local args = {
 [1] = "🌟im using revvy's admin 🌟 :3",

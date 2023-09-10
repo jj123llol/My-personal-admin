@@ -103,6 +103,8 @@ end
 	end)
 	local d1;d1=game.Players.PlayerRemoving:connect(function(plr)
 		if plr.Name == x.Name then
+                        index = table.find(alreadylisted,plr.Name)
+                        table.remove(alreadylisted,index)
 			d:Disconnect()
 			d1:Disconnect()
 		end

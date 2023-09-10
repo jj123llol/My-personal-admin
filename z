@@ -94,7 +94,6 @@ end
 	end)
 end
 game.Players.PlayerAdded:connect(function(plr)
-wait(5)
 	for i,listed in pairs(seclist) do
 		if plr.Name == listed then
 			print(plr.Name == listed)

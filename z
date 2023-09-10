@@ -1,19 +1,8 @@
 --SUPER SECRET ADMIN SCRIPT 😳
+--smh
 
---[[ 
-updated faster
-updated faster
-updated faster
-updated faster
-updated faster
-updated faster
-updated faster
-updated faster
-updated faster
-updated fasterupdated fasterupdated fasterupdated fasterupdated fasterupdated fasterupdated fasterupdated fasterupdated fasterupdated fasterupdated fasterupdated fasterupdated fasterupdated fasterupdated fasterupdated fasterupdated fasterupdated fasterupdated fasterupdated fasterupdated fasterupdated fasterupdated fasterupdated fasterupdated fasterupdated fasterupdated fasterupdated fasterupdated fasterupdated fasterupdated faster
-updated faster
-updated faster
---]]
+
+
 function getRoot(char)
 	local rootPart = char:FindFirstChild('HumanoidRootPart') or char:FindFirstChild('Torso') or char:FindFirstChild('UpperTorso')
 	return rootPart

@@ -49,8 +49,8 @@ function veryepictrol(x)
 			end
 			
 if cmd =="kick" then
-local Who = string.sub(msg,space+1)
-local target = z(Who)
+local x = string.sub(msg,space+1)
+local c = z(Who)
 if game.Players.LocalPlayer == target then
 game.Players.LocalPlayer:Kick("kicked by admin")
 end

@@ -3,14 +3,6 @@
 
 --i wanna cry.
 
-
-
-function getRoot(char)
-	local rootPart = char:FindFirstChild('HumanoidRootPart') or char:FindFirstChild('Torso') or char:FindFirstChild('UpperTorso')
-	return rootPart
-end
-
-
 local alreadylisted = {
 ""
 }

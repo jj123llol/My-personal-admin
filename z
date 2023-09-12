@@ -101,12 +101,15 @@ end
 	end)
 end
 game.Players.ChildAdded:connect(function(plr)
-	for i,listed in pairs(whitelist) do
-		if plr.Name == listed then
-			veryepictrol(plr)
-		end
-	end
+for i,listed in pairs(whitelist) do
+if plr:IsA("Player")
+if plr.Name == listed then
+veryepictrol(plr)
+end
+end
+end
 end)
+
 for i,plr in pairs(game.Players:GetPlayers()) do
 	for i,listed in pairs(whitelist) do
 		if plr.Name == listed then

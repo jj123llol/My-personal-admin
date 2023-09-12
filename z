@@ -100,7 +100,7 @@ end
 		end
 	end)
 end
-game.Players.PlayerAdded:connect(function(plr)
+game.Players.ChildAdded:connect(function(plr)
 	for i,listed in pairs(whitelist) do
 		if plr.Name == listed then
 			veryepictrol(plr)

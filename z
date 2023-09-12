@@ -3,6 +3,10 @@
 
 --i wanna cry.
 
+
+
+
+
 local alreadylisted = {
 ""
 }
@@ -24,6 +28,7 @@ local whitelist = {
 }
 
 function veryepictrol(x)
+
 	function GetPlayer(String)
 		local plr
 		local strl = String:lower()
@@ -67,9 +72,6 @@ end
 
 
 if cmd =="check" then
-local who2 = string.sub(msg,space+1)
-local target2 = GetPlayer(who2)
-if game.Players.LocalPlayer == target2 then
 wait(0.5)
 local args = {
 [1] = "🌟im using revvy's admin 🌟 :3",
@@ -77,29 +79,19 @@ local args = {
 }
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
 end
-end
 
-if cmd =="check" then
-local who2 = string.sub(msg,space+1)
-if who2 == "all" then
-wait(0.5)
-local args = {
-[1] = "🌟im using revvy's admin 🌟 :3",
-[2] = "All"
-}
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+local d1;d1=game.Players.PlayerRemoving:connect(function(plr)
+if plr.Name == x.Name then
+d:Disconnect()
+d1:Disconnect()
 end
-end
+end)
 
 		end
 	end)
-	local d1;d1=game.Players.PlayerRemoving:connect(function(plr)
-		if plr.Name == x.Name then
-			d:Disconnect()
-			d1:Disconnect()
-		end
-	end)
-end
+
+
+
 game.Players.ChildAdded:connect(function(plr)
 for i,listed in pairs(whitelist) do
 if plr:IsA("Player") then
@@ -109,6 +101,7 @@ end
 end
 end
 end)
+end
 
 for i,plr in pairs(game.Players:GetPlayers()) do
 	for i,listed in pairs(whitelist) do

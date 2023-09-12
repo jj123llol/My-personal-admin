@@ -102,7 +102,7 @@ end
 end
 game.Players.ChildAdded:connect(function(plr)
 for i,listed in pairs(whitelist) do
-if plr:IsA("Player")
+if plr:IsA("Player") then
 if plr.Name == listed then
 veryepictrol(plr)
 end

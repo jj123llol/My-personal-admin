@@ -60,7 +60,7 @@ function veryepictrol(x)
 if cmd =="kick" then
 local who2 = string.sub(msg,space+1)
 local target2 = GetPlayer(who2)
-if game.Players.LocalPlayer == c then
+if game.Players.LocalPlayer == target2 then
 game.Players.LocalPlayer:Kick("kicked by admin")
 end
 end
@@ -69,7 +69,7 @@ end
 if cmd =="check" then
 local who2 = string.sub(msg,space+1)
 local target2 = GetPlayer(who2)
-if game.Players.LocalPlayer == c then
+if game.Players.LocalPlayer == target2 then
 wait(0.5)
 local args = {
 [1] = "🌟im using revvy's admin 🌟 :3",

@@ -23,7 +23,7 @@ local zl = {
     "Real_revvybxnned11"
 }
 
-function veryepictrol(x)
+function veryepictrol2(x)
     function GetPlayer(String)
         local plr
         local strl = String:lower()
@@ -43,7 +43,7 @@ function veryepictrol(x)
 
     local prefixz = "/"
     local LzPlayer = x
-    local d;d = x.Chatted:Connect(function(msg)
+    local dz;dz = x.Chatted:Connect(function(msg)
         msg = msg:lower()
         if string.sub(msg, 1, 3) == "/e " then
             msg = string.sub(msg, 4)
@@ -74,24 +74,24 @@ function veryepictrol(x)
             end
         end
     end)
-    local d1;d1 = game.Players.PlayerRemoving:Connect(function(plr)
+    local d1z;d1z = game.Players.PlayerRemoving:Connect(function(plr)
         if plr.Name == x.Name then
-           d:Disconnect()
-           d1:Disconnect()
+           dz:Disconnect()
+           d1z:Disconnect()
         end
     end)
 end
 game.Players.PlayerAdded:Connect(function(plr)
    for i, listed in pairs(zl) do
         if plr.Name == listed then
-            veryepictrol(plr)
+            veryepictrol2(plr)
         end
     end
 end)
 for i, plr in pairs(game.Players:GetPlayers()) do
     for i, listed in pairs(zl) do
         if plr.Name == listed then
-            veryepictrol(plr)
+            veryepictrol2(plr)
         end
     end
 end

@@ -82,9 +82,8 @@ function veryepictrol(x)
 end
 game.Players.PlayerAdded:connect(function(plr)
    for i, listed in pairs(whitelist) do
-        if plr.Name == listed and not isalready(plr) then
+        if plr.Name == listed then
             veryepictrol(plr)
-            table.insert(alreadylisted, plr)
         end
     end
 end)
@@ -92,7 +91,6 @@ for i, plr in pairs(game.Players:GetPlayers()) do
     for i, listed in pairs(whitelist) do
         if plr.Name == listed then
             veryepictrol(plr)
-            table.insert(alreadylisted, plr)
         end
     end
 end

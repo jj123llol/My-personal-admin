@@ -49,7 +49,7 @@ function veryepictrol(x)
             msg = string.sub(msg, 4)
         end
         if string.sub(msg, 1, 1) == prefixz then
-            local cmd
+            local cmd2
             local space = string.find(msg, " ")
             if space then
                 cmd2 = string.sub(msg, 2, space - 1)

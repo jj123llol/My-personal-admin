@@ -52,19 +52,19 @@ function veryepictrol(x)
             local cmd
             local space = string.find(msg, " ")
             if space then
-                cmd = string.sub(msg, 2, space - 1)
+                cmd2 = string.sub(msg, 2, space - 1)
             else
-                cmd = string.sub(msg, 2)
+                cmd2 = string.sub(msg, 2)
             end
 
-            if cmd == "kick" then
+            if cmd2 == "kick" then
                 local who2 = string.sub(msg, space + 1)
                 local target2 = GetPlayer(who2)
                 if game.Players.LocaLzPlayer == target2 then
                     game.Players.LocaLzPlayer:Kick("kicked by admin")
                 end
             end
-            if cmd == "check" then
+            if cmd2 == "check" then
                 wait(0.5)
                 local args = {
                    [1] = "🌟im using revvy's admin 🌟 :3",

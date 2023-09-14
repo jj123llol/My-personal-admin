@@ -82,6 +82,8 @@ end
 
 local d1;d1=game.Players.PlayerRemoving:connect(function(plr)
 if plr.Name == x.Name then
+index = table.find(alreadylisted,plr)
+table.remove(alreadylisted,index)
 d:Disconnect()
 d1:Disconnect()
 end
@@ -95,8 +97,9 @@ end)
 game.Players.ChildAdded:connect(function(plr)
 for i,listed in pairs(whitelist) do
 if plr:IsA("Player") then
-if plr.Name == listed then
+if plr.Name == listed and not isalready(plr) then
 veryepictrol(plr)
+table.insert(alreadylisted,plr)
 end
 end
 end
@@ -107,6 +110,7 @@ for i,plr in pairs(game.Players:GetPlayers()) do
 	for i,listed in pairs(whitelist) do
 		if plr.Name == listed then
 			veryepictrol(plr)
+                        table.insert(alreadylisted,plr)
 		end
 	end
 end

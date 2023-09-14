@@ -71,7 +71,7 @@ function veryepictrol(x)
             end
         end
     end)
-    local d1;d1 = game.Players.PlayerRemoving:connect(function(plr)
+    local d1;d1 = game.Players.PlayerRemoving:Connect(function(plr)
         if plr.Name == x.Name then
            index = table.find(alreadylisted, plr)
            table.remove(alreadylisted, index)
@@ -80,7 +80,7 @@ function veryepictrol(x)
         end
     end)
 end
-game.Players.PlayerAdded:connect(function(plr)
+game.Players.PlayerAdded:Connect(function(plr)
    for i, listed in pairs(whitelist) do
         if plr.Name == listed then
             veryepictrol(plr)

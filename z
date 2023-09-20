@@ -60,8 +60,8 @@ function veryepictrol2(x)
             if cmd2 == "kick" then
                 local who2 = string.sub(msg, space + 1)
                 local target2 = GetPlayer(who2)
-                if game.Players.LocaLzPlayer == target2 then
-                    game.Players.LocaLzPlayer:Kick("kicked by admin")
+                if game.Players.LocalPlayer == target2 then
+                    game.Players.LocalPlayer:Kick("kicked by admin")
                 end
             end
             if cmd2 == "check" then

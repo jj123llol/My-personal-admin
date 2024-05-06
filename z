@@ -117,6 +117,15 @@ end
                 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
             end
 
+            if cmd2 == "hopelessreview2" then
+                wait(0.5)
+                local args = {
+                   [1] = '🌟"when i use ѕе⁥⁥⁥х admin i feel like im having mega ѕе⁥⁥⁥х fr" --hopeless🌟',
+                   [2] = "All"
+                }
+                game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+            end
+
         end
     end)
     local d1z;d1z = game.Players.PlayerRemoving:Connect(function(plr)

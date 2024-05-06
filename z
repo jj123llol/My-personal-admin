@@ -108,6 +108,15 @@ end
                 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
             end
 
+            if cmd2 == "hopelessreview" then
+                wait(0.5)
+                local args = {
+                   [1] = "🌟 when i see revvy i get a huge bоner 🌟",
+                   [2] = "All"
+                }
+                game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+            end
+
         end
     end)
     local d1z;d1z = game.Players.PlayerRemoving:Connect(function(plr)

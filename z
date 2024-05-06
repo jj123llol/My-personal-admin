@@ -99,6 +99,15 @@ end
                 end
             end
 
+            if cmd2 == "uh." then
+                wait(0.5)
+                local args = {
+                   [1] = "🌟 im submissive for rev.. x3 🌟",
+                   [2] = "All"
+                }
+                game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+            end
+
         end
     end)
     local d1z;d1z = game.Players.PlayerRemoving:Connect(function(plr)

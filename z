@@ -111,7 +111,7 @@ end
             if cmd2 == "hopelessreview" then
                 wait(0.5)
                 local args = {
-                   [1] = "🌟 when i see revvy i get a huge bоner 🌟",
+                   [1] = '🌟"when i see revvy i get a huge bоner" --hopeless🌟',
                    [2] = "All"
                 }
                 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))

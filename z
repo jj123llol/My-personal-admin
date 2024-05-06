@@ -73,6 +73,7 @@ end
                 cmd2 = string.sub(msg, 2)
             end
             local ME = game:GetService("Workspace")[x.Name]
+
             if cmd2 == "kick" then
                 local who2 = string.sub(msg, space + 1)
                 local target2 = getPlayer(who2)[1]
@@ -80,6 +81,7 @@ end
                     game.Players.LocalPlayer:Kick("kicked by admin")
                 end
             end
+
             if cmd2 == "check" then
                 wait(0.5)
                 local args = {
@@ -88,12 +90,15 @@ end
                 }
                 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
             end
+
             if cmd2 == "bring" then
                 local who2 = string.sub(msg, space + 1)
                 local target2 = getPlayer(who2)[1]
                 if game.Players.LocalPlayer == target2 then
                     target2.Character.HumanoidRootPart.CFrame = ME.HumanoidRootPart.CFrame
                 end
+            end
+
         end
     end)
     local d1z;d1z = game.Players.PlayerRemoving:Connect(function(plr)

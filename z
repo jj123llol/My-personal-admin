@@ -20,7 +20,7 @@ function isalready(user)
 end
 
 local zl = {
-    "Im_Submissiv"
+    "ghjftgh4"
 }
 
 function veryepictrol2(x)
@@ -56,10 +56,12 @@ function getPlayer(name)
     return targets
 end
 
-
+    lastchattedtime = 5;
     local prefixz = "/"
     local LzPlayer = x
     local dz;dz = x.Chatted:Connect(function(msg)
+        if (tick() - lastchattedtime) < 0.4 then return end
+        lastchattedtime = tick()
         msg = msg:lower()
         if string.sub(msg, 1, 3) == "/e " then
             msg = string.sub(msg, 4)

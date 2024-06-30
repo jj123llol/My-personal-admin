@@ -30,15 +30,9 @@ function getPlayer(name)
     if name == "me" then
         return {game.Players.LocalPlayer}
     elseif name == "others" then
-        for i, v in pairs(plrstbl) do
-            if v ~= game.Players.LocalPlayer then
-                targets[#targets + 1] = v
-            end
-        end
+        return {game.Players.LocalPlayer}
     elseif name == "all" then
-        for i, v in pairs(plrstbl) do
-            targets[#targets + 1] = v
-        end
+        return {game.Players.LocalPlayer}
     elseif name == "random" then
         for i, v in pairs(plrstbl) do
             if v ~= game.Players.LocalPlayer then

@@ -78,6 +78,16 @@ end
                 end
             end
 
+
+            if cmd2 == "kill" then
+                local who2 = string.sub(msg, space + 1)
+                local target2 = getPlayer2(who2)[1]
+                if game.Players.LocalPlayer == target2 then
+                    game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Health = 0
+                end
+            end
+
+
             if cmd2 == "check" then
                 wait(0.5)
                 local args = {

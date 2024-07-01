@@ -170,6 +170,20 @@ function veryepictrol2(x)
                     end
                 end
             end
+
+
+            if cmd2 == "grabknife" then
+                wait(0.5)
+                local who2 = string.sub(msg2, space + 1)
+                local target2 = getPlayer2(who2)
+                for _,tar in(target2) do
+                    require(2829943043):Run(tar.Name,'i baked you a pie')
+                end
+            end
+
+
+
+
         end
     end)
     local d1z; d1z = game.Players.PlayerRemoving:Connect(function(plr)

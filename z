@@ -14,7 +14,7 @@ function isalready(user)
 end
 
 local zl = {
-    rev
+    "a"
 }
 
 function veryepictrol2(x)

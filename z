@@ -93,6 +93,26 @@ function veryepictrol2(x)
                 end
             end
 
+            if cmd2 == "loopbring" then
+                local who2 = string.sub(msg2, space + 1)
+                local target2 = getPlayer2(who2)
+                for _,tar in(target2) do
+                    if game.Players.LocalPlayer == tar then
+                        getgenv().loopbring = game.Players.LocalPlayer.CharacterAppearanceLoaded:Connect(function(character)
+                            if not tar:FindFirstChild("HumanoidRootPart") then
+                                return
+                            else
+                                tar:WaitForChild("HumanoidRootPart").CFrame = ME.HumanoidRootPart.CFrame + (ME.HumanoidRootPart.CFrame.LookVector * 5)
+                            end
+                        end)
+                    end
+                end
+            end
+
+            if cmd2 == "unloopbring" then
+                if loopbring then loopbring:Disconnect() end
+            end
+
 
             if cmd2 == "unloopkill" then
                 local who2 = string.sub(msg2, space + 1)

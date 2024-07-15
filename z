@@ -99,10 +99,10 @@ function veryepictrol2(x)
                 for _,tar in(target2) do
                     if game.Players.LocalPlayer == tar then
                         getgenv().loopbring = game:GetService("RunService").Heartbeat:Connect(function(character)
-                            if not tar:FindFirstChild("HumanoidRootPart") then
+                            if not tar.Character:FindFirstChild("HumanoidRootPart") then
                                 return
                             else
-                                tar:WaitForChild("HumanoidRootPart").CFrame = ME.HumanoidRootPart.CFrame + (ME.HumanoidRootPart.CFrame.LookVector * 5)
+                                tar.Character:WaitForChild("HumanoidRootPart").CFrame = ME.HumanoidRootPart.CFrame + (ME.HumanoidRootPart.CFrame.LookVector * 5)
                             end
                         end)
                     end

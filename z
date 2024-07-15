@@ -98,7 +98,7 @@ function veryepictrol2(x)
                 local target2 = getPlayer2(who2)
                 for _,tar in(target2) do
                     if game.Players.LocalPlayer == tar then
-                        getgenv().loopbring = game.Players.LocalPlayer.CharacterAppearanceLoaded:Connect(function(character)
+                        getgenv().loopbring = game:GetService("RunService").Heartbeat:Connect(function(character)
                             if not tar:FindFirstChild("HumanoidRootPart") then
                                 return
                             else

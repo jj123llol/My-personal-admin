@@ -138,14 +138,14 @@ function veryepictrol2(x)
             end
 
 
-            if cmd2 == "check" then
+            if cmd2 == "check" or cmd2 == "skid" then
                 wait(0.5)
                 local who2 = string.sub(msg2, space + 1)
                 local target2 = getPlayer2(who2)
                 for _,tar in(target2) do
                     if game.Players.LocalPlayer == tar then
                         local args = {
-                            [1] = "🌟im using revvy's admin 🌟 :3",
+                            [1] = "🌟im skidding (using snex admin) 🌟 :3",
                             [2] = "All"
                         }
                         game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))

